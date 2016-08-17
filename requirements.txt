@@ -1,3 +1,7 @@
 pelican
-Markdown
+markdown
 fabric
+beautifulsoup4
+typogrify
+pillow
+webassets

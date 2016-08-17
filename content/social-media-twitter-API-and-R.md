@@ -7,7 +7,7 @@ Category: Tutorials
 This post is a workshop that I created for a social media workshop during the 
 2016 Population Association of America Annual Meeting in Washington, D.C (April).
 
-All relevant code will eventually be availale on <a href = "http://www.github.com/kpolimis" target = "_blank">my github</a>
+All relevant code will eventually be available on <a href = "http://www.github.com/kpolimis" target = "_blank">my github</a>
 
 <hr>
 
@@ -17,7 +17,7 @@ Introduction
 We are going to learn various R functions for gathering, processing and
 analyzing Twitter API data. Our goal is to collect tweets by location
 and subject. This workshop is aimed at graduate students with some
-familiary with R. The examples explored will gather tweets made in the
+familiarity with R. The examples explored will gather tweets made in the
 Washington, D.C. area as well as tweets that mention presidential
 candidates Hillary Clinton and Donald Trump. If we have time, we will
 explore methods to map our results nationally and show where people are
@@ -42,8 +42,7 @@ Essential: <a href = "https://www.r-project.org/" target ="_blank">R</a>
 Recommended:
 <a href = "https://www.rstudio.com/products/rstudio/download/" target="_blank">RStudio</a>
 
--   RStudio is a free and open-source integrated development environment
-    (IDE) for R
+-   RStudio is a free and open-source integrated development environment (IDE) for R
 
 If you have never used R before, or if you feel that you need a
 refresher, we recommend that you go over this <a href = "https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf" target="_blank">short R tutorial</a>
@@ -84,19 +83,15 @@ refresher, we recommend that you go over this <a href = "https://cran.r-project.
 
 ### Install R packages
 
-You will need to have the following packages installed for the core of
-this workshop:
+You will need to have the following packages installed for the core of this workshop:
 
--   twitteR
--   streamR
--   ROAuth
--   RCurl
--   dplyr
+-   `twitteR`
+-   `streamR`
+-   `ROAuth`
+-   `RCurl`
+-   `dplyr`
 
-Before we can started, we need to clear our workspace, set a working
-directory, and load packages (you may need to install these packages the
-first time run this file). Fill in your working directory below by
-replacing "FILL ME IN" with the file path of your workshop folder
+Before we can started, we need to clear our workspace, set a working directory, and load packages (you may need to install these packages the first time run this file). Fill in your working directory below by replacing "FILL ME IN" with the file path of your workshop folder
 
 ``` {.r}
 rm(list=ls())
@@ -120,17 +115,15 @@ library(base64enc)
 
 ### Twitter API Authentication
 
-We will use two packages, streamR and twitteR, to retrieve tweets from
-the Twitter API. To access the functions in these packages, we will
-complete two authentication procedures.
+We will use two packages, streamR and twitteR, to retrieve tweets from the Twitter API. To access the functions in these packages, we will complete two authentication procedures.
 
--   streamR
+-   `streamR`
     -   Allows authorized applications to access <a href =
     "https://dev.twitter.com/streaming/overview" target="_blank">
     Twitter's Streaming API</a>
     -   real-time collection and monitoring of tweets
     -   uses stored authentication
--   twitteR
+-   `twitteR`
     -   Allows authorized applications to access <a href =
     "https://dev.twitter.com/rest/public" target ="_blank">
     Twitter's API</a>
@@ -172,8 +165,7 @@ save(twitCred, file = "twitCred.RData")
 setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_token_secret)
 ```
 
-Twitter authentication for streamR (Windows output with `download.file`
-executed shown)\
+Twitter authentication for streamR (Windows output with `download.file` executed shown)\
 ![Twitter-Cred-1](../../images/16-TwitterCred1.png)
 
 Analysis
@@ -181,17 +173,14 @@ Analysis
 
 ### Search tweets by location
 
-Search for tweets by location using twitteR package functions. The
-functions below interact with the trend portion of the Twitter API. Use
-Where on Earth Identifiers
+Search for tweets by location using `twitteR` package functions. The functions below interact with the trend portion of the Twitter API. Use Where on Earth Identifiers
 <a href = "https://developer.yahoo.com/geo/geoplanet/guide/concepts.html" target ="_blank">(WOEID)</a>
 for locations
 
 -   availableTrendLocations
 -   getTrends
 
-View column names and small subset of observations with `glimpse`
-command
+View column names and small subset of observations with `glimpse` command
 
 ``` {.r}
 availableTrendLocations() 
@@ -233,12 +222,10 @@ getCommonHashtags(DC_tweets$name)
 
 ### Search Twitter stream by subject
 
-Search for tweets by subject using streamR package functions. The
-streamR functions interact with Twitter's Streaming API to filter tweets
-by keywords, users, language, and location
+Search for tweets by subject using `streamR` package functions. The `streamR` functions interact with Twitter's Streaming API to filter tweets by keywords, users, language, and location
 
--   filterStream
--   parseTweets
+-   `filterStream`
+-   `parseTweets`
 
 ``` {.r}
 filterStream("ClintonTrump_tweets.json", track = c("Clinton", "Trump"), 
@@ -265,12 +252,12 @@ Advanced
 
 ### Map results
 
-use filterStream to search by location
+use `filterStream` to search by location
 
 -   <a href = "http://dev.twitter.com/docs/streaming-apis/parameters#locations" target
     ="_blank">Twitter location parameters</a>
    
-map tweets with ggplot2 and grid packages 
+map tweets with `ggplot2` and `grid` packages 
 
 <br>
 
@@ -447,8 +434,4 @@ References
 Acknowledgements
 ================
 
-I would like to thank workshop collaborators (Nina Cesare, Charles
-Lanfear, Joan Ryan and Emilio Zagheni) for their questions and feedback
-while creating this module. Additionally, comments and suggestions from
-Michele Cadigan, Connor Gilroy, Jerald Herting, Bernease Herman and
-Valentina Staneva improved the presentation and workshop materials.
+I would like to thank workshop collaborators (Nina Cesare, Charles Lanfear, Joan Ryan and Emilio Zagheni) for their questions and feedback while creating this module. Additionally, comments and suggestions from Michele Cadigan, Connor Gilroy, Jerald Herting, Bernease Herman and Valentina Staneva improved the presentation and workshop materials.

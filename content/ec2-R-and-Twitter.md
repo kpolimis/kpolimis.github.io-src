@@ -9,7 +9,7 @@ Status: draft
 How to use Amazon's EC2 to analyze Twitter with R
 =================================================
 
-This post will be available 2nd April 2016
+This post will be available 2^nd^ April 2016
 
 R Markdown
 ----------

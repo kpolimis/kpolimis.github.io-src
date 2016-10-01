@@ -47,7 +47,7 @@ Run pelican-quickstart to set up the Pelican blogging platform. The screenshot b
 ~~~bash 
 pelican-quickstart  
 ~~~ 
-![pelican-quickstart](images/pelican-quickstart.png)  
+![pelican-quickstart](../../images/pelican-quickstart.png)  
 
 Add requirements.txt for Pelican blog build on Travis
 ~~~bash 

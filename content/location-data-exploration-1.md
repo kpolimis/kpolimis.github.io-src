@@ -1,6 +1,6 @@
 ---
 Author: Kivan Polimis
-Category: 'How-to'
+Category: How-to
 Date: '2016-9-30 5:07'
 Title: Location Data Exploration #1
 ---

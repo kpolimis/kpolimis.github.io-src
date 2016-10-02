@@ -5,3 +5,4 @@ beautifulsoup4
 typogrify
 pillow
 webassets
+IPython==1

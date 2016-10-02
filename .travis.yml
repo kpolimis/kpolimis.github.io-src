@@ -3,7 +3,7 @@ branches:
   - master
 before_install:
 #- git rm --cached built_website
-#- git submodule update --init --recursive
+- git submodule update --init --recursive
 addons:
   apt:
     sources:

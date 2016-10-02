@@ -1,8 +1,8 @@
 branches:
   only:
   - master
-#before_install:
-#- git submodule update --init --recursive
+before_install:
+- git submodule update --init --recursive
 addons:
   apt:
     sources:

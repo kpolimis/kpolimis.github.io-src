@@ -13,7 +13,7 @@ addons:
     - r-base-dev
     - r-recommended
     - pandoc
-    pandoc_version: 1.17.0.3
+#    pandoc_version: 1.17.0.3
 language: python
 cache: packages
 r_packages:

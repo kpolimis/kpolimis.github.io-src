@@ -7,3 +7,4 @@ pillow
 webassets
 ipython==5.1.0
 sphinx
+nbconvert

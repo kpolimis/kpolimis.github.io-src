@@ -22,10 +22,14 @@ DEFAULT_LANG = u'en'
 # Theme and plugins
 #JINJA_FILTERS = {'sidebar': filters.sidebar}
 #THEME = "pelican-themes/html5-dopetrope"
-#PLUGIN_PATHS = ['pelican-plugins']
-#PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
-#           'liquid_tags.include_code', 'liquid_tags.notebook',
-#           'liquid_tags.literal', 'rmd_reader']
+
+CODE_DIR = 'downloads/code'
+NOTEBOOK_DIR = 'downloads/notebooks'
+
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
+           'liquid_tags.include_code', 'liquid_tags.notebook',
+           'liquid_tags.literal', 'rmd_reader']
 
 # RMD_READER_KNITR_OPTS_CHUNK = {'fig.path': '../../../figure/'}
 

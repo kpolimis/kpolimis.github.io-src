@@ -2,9 +2,9 @@ branches:
   only:
   - master
 before_install:
-- git rm --cached pelican-plugins
-- git submodule add https://github.com/getpelican/pelican-plugins 
-- git submodule update --init --recursive
+#- git rm --cached pelican-plugins
+#- git submodule add https://github.com/getpelican/pelican-plugins 
+#- git submodule update --init --recursive
 addons:
   apt:
     sources:

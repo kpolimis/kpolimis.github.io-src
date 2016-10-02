@@ -9,9 +9,12 @@ Status: draft
 <!--  
 {% notebook google_location_history.ipynb cells[1:7] %}
 
-[flight-map](../../images/flights.png)
+![flight-map](../../images/chloropleth.png )
 
-{% notebook map_of_flights.ipynb cells[12:] %}
+
+![flight-map](../../images/hexbin.png)
+
+{% notebook google_location_history.ipynbcells[12:] %}
 
 -->
 

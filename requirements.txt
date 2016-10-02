@@ -5,5 +5,5 @@ beautifulsoup4
 typogrify
 pillow
 webassets
-IPython==1
+ipython==5.1.0
 sphinx

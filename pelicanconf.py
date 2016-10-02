@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os
 #from utils import filters
 
 AUTHOR = u'Kivan Polimis'
@@ -30,6 +31,18 @@ PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
            'liquid_tags.literal', 'rmd_reader']
+
+#{% if EXTRA_HEADER %}
+#{{ EXTRA_HEADER }}
+#{% endif %}
+
+
+#if not os.path.exists('_nb_header.html'):
+#    import warnings
+#    warnings.warn("_nb_header.html not found.  "
+#                  "Rerun make html to finalize build.")
+#else:
+#    EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 
 # RMD_READER_KNITR_OPTS_CHUNK = {'fig.path': '../../../figure/'}
 

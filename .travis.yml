@@ -3,6 +3,7 @@ branches:
   - master
 before_install:
 #- git rm --cached built_website
+- git submodule add https://github.com/getpelican/pelican-plugins pelican-plugins
 - git submodule update --init --recursive
 addons:
   apt:

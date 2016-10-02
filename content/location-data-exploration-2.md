@@ -6,9 +6,12 @@ Title: Location Data Exploration #2
 Status: draft
 ---
 
-{% notebook map_of_flights.ipynb cells[1:7] %}
+<!--  
+{% notebook google_location_history.ipynb cells[1:7] %}
 
-![flight-map](../../images/flights.png)
+[flight-map](../../images/flights.png)
 
 {% notebook map_of_flights.ipynb cells[12:] %}
+
+-->
 

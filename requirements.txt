@@ -6,3 +6,4 @@ typogrify
 pillow
 webassets
 IPython==1
+sphinx

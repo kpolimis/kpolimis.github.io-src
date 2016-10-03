@@ -91,3 +91,6 @@ ENV/
 # plugins
 pelican-plugins/
 _nb_header.html
+
+# Mac files
+*.DS_Store

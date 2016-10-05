@@ -11,6 +11,7 @@ SITENAME = u'Kivan Polimis'
 SITEURL = ''
 
 PATH = 'content'
+PAGE_ORDER_BY = 'sortorder'
 
 # Times and dates
 TIMEZONE = 'US/Pacific'

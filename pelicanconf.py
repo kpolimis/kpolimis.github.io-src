@@ -33,6 +33,7 @@ PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
            'liquid_tags.literal', 'rmd_reader']
 
+MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra']
 #{% if EXTRA_HEADER %}
 #{{ EXTRA_HEADER }}
 #{% endif %}

@@ -9,7 +9,7 @@ Developed with Ariel Rokem and  Bryna Hazelton from eScience Institute, Universi
 [forestci](https://pypi.python.org/pypi/forestci/0.1)
 
 # Summary
-Random forests are a method for predicting numerous ensemble learning tasks. The variability in predictions is important for measuring standard errors and estimating standard errors. `forest-confidence-interval` is a Python module for calculating variance and adding confidence intervals to `scikit-learn` random forest regression or classification objects. The core functions calculate an in-bag and error bars for random forest objects. Our software is designed for individuals using `scikit-learn` random forest objects that want to add estimates of uncertainty to random forest predictors. This module is an implementation of an algorithm developed by @wager_confidence_2014 and previously implemented in R here [@wager_randomforestci_2016].
+Random forests are a method for predicting numerous ensemble learning tasks. The variability in predictions is important for measuring standard errors and estimating standard errors. `forest-confidence-interval` is a Python module for calculating variance and adding confidence intervals to `scikit-learn` random forest regression or classification objects. The core functions calculate an in-bag and error bars for random forest objects. Our software is designed for individuals using `scikit-learn` random forest objects that want to add estimates of uncertainty to random forest predictors. This module is an implementation of an algorithm developed by Wager et al. (2014) and previously implemented in R here (Wager 2016).
 
 
 # Examples gallery
@@ -19,17 +19,17 @@ The regression example uses a data-set from the [UC Irvine Machine Learning Repo
 ## Regression example
 
 ### No variance estimated
--![plot-mpg-no-variance](plot_mpg_no_variance.png)
+-![plot-mpg-no-variance](../images/plot_mpg_no_variance.png)
 
 ### Plot with variance
--![plot-mpg-variance](plot_mpg.png)
+-![plot-mpg-variance](../images/plot_mpg.png)
 
 ## Classification example
 ### No variance estimated
--![plot-spam-no-variance](plot_spam_no_variance.png)
+-![plot-spam-no-variance](../images/plot_spam_no_variance.png)
 
 ### Plot with variance
--![plot-spam](plot_spam.png)
+-![plot-spam](../images/plot_spam.png)
 
 # References
 

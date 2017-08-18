@@ -8,7 +8,7 @@ Welcome to my website. My name is Kivan and I am a recent Ph.D. graduate from th
 Also, I'm passionate about growing the community of computational social scientists and teach in [Software Carpentry](https://software-carpentry.org/
 ) and [Data Carpentry](http://www.datacarpentry.org/) Workshops.
 
-If you are interested in contacting me, email kivan.polimis@gmail.com 
+If you are interested in contacting me, email: [kivan.polimis@gmail.com](mailto:kivan.polimis@gmail.com)
 
 ![Kivan](../../images/Kivan.jpg)
 

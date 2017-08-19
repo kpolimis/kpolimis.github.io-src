@@ -5,9 +5,9 @@ Date: '2016-9-30 5:07'
 Title: Location Data Exploration #1
 ---
 
-{% notebook map_of_flights.ipynb cells[1:19] %}
+{% notebook ../../downloads/notebooks/map_of_flights.ipynb cells[1:19] %}
 
 ![flight-map](../../images/flights.png)
 
-{% notebook map_of_flights.ipynb cells[22:] %}
+{% notebook ../../downloads/notebooks/map_of_flights.ipynb cells[22:] %}
 

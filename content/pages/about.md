@@ -1,6 +1,7 @@
 ---
 Title: About
 sortorder: 001
+save_as: index.html
 ---
 
 Welcome to my website. My name is Kivan and I am a recent Ph.D. graduate from the University of Washington.  Currently, I am a postdoctoral fellowship at Universita Bocconi's Dondena Centre for Research on Social Dynamics and Public Policy in Milan. My research focuses on health development and applying statistical techniques to investigate disparities in health care, transportation, and the legal system. As a computational social scientist, I'm interested in structural inequality, machine learning, and developing programming solutions to real-world problems.

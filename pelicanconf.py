@@ -10,13 +10,20 @@ SITENAME = u'Kivan Polimis'
 # and share some programming tips'
 SITEURL = ''
 
+INDEX_SAVE_AS = 'blog_index.html'
+
 PATH = 'content'
 PAGE_ORDER_BY = 'sortorder'
+
 
 # Times and dates
 TIMEZONE = 'US/Pacific'
 DEFAULT_LANG = u'en'
 
+SUMMARY_MAX_LENGTH = '50'
+
+
+GOOGLE_ANALYTICS = 'UA-104881568-1'
 # Set the article URL
 #ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 #ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
@@ -28,23 +35,35 @@ DEFAULT_LANG = u'en'
 CODE_DIR = 'downloads/code'
 NOTEBOOK_DIR = 'downloads/notebooks'
 
+READERS = {'html': None}
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
-           'liquid_tags.include_code', 'liquid_tags.notebook',
-           'liquid_tags.literal', 'rmd_reader']
+PLUGINS = ['liquid_tags.notebook']
+#PLUGINS = [
+#    'summary',       # auto-summarizing articles
+#    'feed_summary'  # use summaries for RSS, not full articles
+    #'ipynb.liquid'  # for embedding notebooks
+#    ]
+#MARKUP = ('md', )
 
-MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra']
+TWITTER_USERNAME = 'kpolimis'
+GITHUB_USERNAME = 'kpolimis'
+AUTHOR_CV = "http://kivanpolimis.com/docs/Polimis_Curriculum_Vitae.pdf"
+SHOW_ARCHIVES = True
+
+IGNORE_FILES = ['.ipynb_checkpoints']
+#MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra']
+
+
 #{% if EXTRA_HEADER %}
 #{{ EXTRA_HEADER }}
 #{% endif %}
 
-
-#if not os.path.exists('_nb_header.html'):
-#    import warnings
-#    warnings.warn("_nb_header.html not found.  "
-#                  "Rerun make html to finalize build.")
-#else:
-#    EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
+if not os.path.exists('_nb_header.html'):
+    import warnings
+    warnings.warn("_nb_header.html not found.  "
+                  "Rerun make html to finalize build.")
+else:
+    EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 
 # RMD_READER_KNITR_OPTS_CHUNK = {'fig.path': '../../../figure/'}
 

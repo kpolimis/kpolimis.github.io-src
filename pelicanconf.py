@@ -24,26 +24,30 @@ SUMMARY_MAX_LENGTH = '50'
 
 
 GOOGLE_ANALYTICS = 'UA-104881568-1'
+
 # Set the article URL
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 # Theme and plugins
-#JINJA_FILTERS = {'sidebar': filters.sidebar}
-#THEME = "pelican-themes/html5-dopetrope"
+# JINJA_FILTERS = {'sidebar': filters.sidebar}
+# THEME = "pelican-themes/html5-dopetrope"
 
 CODE_DIR = 'downloads/code'
 NOTEBOOK_DIR = 'downloads/notebooks'
 
 READERS = {'html': None}
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['liquid_tags.notebook']
-#PLUGINS = [
-#    'summary',       # auto-summarizing articles
-#    'feed_summary'  # use summaries for RSS, not full articles
-    #'ipynb.liquid'  # for embedding notebooks
-#    ]
-#MARKUP = ('md', )
+PLUGINS = ['liquid_tags.notebook',  # for embedding notebooks
+           'summary',       # auto-summarizing articles
+           'feed_summary',  # use summaries for RSS, not full articles
+           'latex'
+           ]
+# MARKUP = ('md', )
+
+# Only use LaTeX for selected articles
+
+LATEX = 'article'
 
 TWITTER_USERNAME = 'kpolimis'
 GITHUB_USERNAME = 'kpolimis'
@@ -51,12 +55,6 @@ AUTHOR_CV = "http://kivanpolimis.com/docs/Polimis_Curriculum_Vitae.pdf"
 SHOW_ARCHIVES = True
 
 IGNORE_FILES = ['.ipynb_checkpoints']
-#MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra']
-
-
-#{% if EXTRA_HEADER %}
-#{{ EXTRA_HEADER }}
-#{% endif %}
 
 if not os.path.exists('_nb_header.html'):
     import warnings

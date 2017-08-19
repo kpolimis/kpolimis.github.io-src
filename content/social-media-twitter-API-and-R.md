@@ -23,6 +23,8 @@ candidates Hillary Clinton and Donald Trump. If we have time, we will
 explore methods to map our results nationally and show where people are
 talking about the candidates.
 
+<!-- PELICAN_END_SUMMARY -->
+
 Overview
 ========
 

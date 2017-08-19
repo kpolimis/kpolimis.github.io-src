@@ -25,8 +25,8 @@ SUMMARY_MAX_LENGTH = '50'
 
 GOOGLE_ANALYTICS = 'UA-104881568-1'
 # Set the article URL
-#ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-#ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 # Theme and plugins
 #JINJA_FILTERS = {'sidebar': filters.sidebar}
@@ -63,7 +63,7 @@ if not os.path.exists('_nb_header.html'):
     warnings.warn("_nb_header.html not found.  "
                   "Rerun make html to finalize build.")
 else:
-    EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
+    EXTRA_HEADER = open('_nb_header.html').read()
 
 # RMD_READER_KNITR_OPTS_CHUNK = {'fig.path': '../../../figure/'}
 

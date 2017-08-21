@@ -49,6 +49,8 @@ PLUGINS = ['liquid_tags.notebook',  # for embedding notebooks
 
 LATEX = 'article'
 
+# SUMMARY_USE_FIRST_PARAGRAPH = 'True'
+
 TWITTER_USERNAME = 'kpolimis'
 GITHUB_USERNAME = 'kpolimis'
 AUTHOR_CV = "http://kivanpolimis.com/docs/Polimis_Curriculum_Vitae.pdf"

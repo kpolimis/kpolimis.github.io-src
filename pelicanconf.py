@@ -10,7 +10,7 @@ SITENAME = u'Kivan Polimis'
 # and share some programming tips'
 SITEURL = ''
 
-INDEX_SAVE_AS = 'blog_index.html'
+#INDEX_SAVE_AS = 'blog_index.html'
 
 PATH = 'content'
 PAGE_ORDER_BY = 'sortorder'
@@ -26,8 +26,8 @@ SUMMARY_MAX_LENGTH = '50'
 GOOGLE_ANALYTICS = 'UA-104881568-1'
 
 # Set the article URL
-ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+#ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+#ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 # Theme and plugins
 # JINJA_FILTERS = {'sidebar': filters.sidebar}

@@ -8,7 +8,7 @@ Category: Review
 Computational approaches to health, especially approaches harnessing "big data'', offer researchers emerging methods and novel data to understand social inequalities. The infancy of big data and methods in computational social science research makes the field a Wild West frontier of ethical dilemmas and ensemble research strategies from multiple disciplines (Salganik 2017). The recent intersection of computational big data methods and social science research has fittingly left most of the history of computational social science online. For instance, Google Trends data show the meteoric rise of big data and other related terms (big data, machine learning, and computational social science. See Figure  1) in Google searches since 2012.
 
 <div style="text-align:center" markdown="1"> 
-![Google Trends Histogram](../../images/google_trends_histogram_edited.png "Caption")
+![Google Trends Histogram](../../images/google_trends_histogram_edited.png "Google Trends Histogram")
 <figcaption>Google Trends Histogram</figcaption>
 </div>
 
@@ -22,7 +22,7 @@ The Russell Sage Foundation in conjunction with Princeton University sponsored t
 I particularly enjoyed mass collaboration with the <a href = "http://www.fragilefamilieschallenge.org/" target ="_blank"> Fragile Families Challenge</a> and digital field experiments. After participating in the Fragile Families Challenge, a first of its kind challenge to meld social science research and data science competitive innovation. This challenge allows researchers to use the longitudinal <a href = "https://en.wikipedia.org/wiki/Fragile_Families_and_Child_Wellbeing_Study" target ="_blank"> Fragile Families and Child Wellbeing Study</a> to infer six key outcomes (GPA, 'grit', material hardship, eviction, layoff and job training) for adolescents and their households by age 15. Our group combined lessons from another day of study, digital field experiments via the <a href = "http://www.allourideas.org/" target ="_blank"> Wiki Survey platform</a>, to incorporate wisdom from authors of Fragile Families studies and Amazon Mechanical Turk to prune the predictive model and reduce the potential variables from a parameter space of thousands to a few dozen predictors. I appreciated being part of an institute that united a group of researchers straddling data science and social science, live-streamed lectures for the public, and provided the (personal and professional) scaffolding for future collaboration in computational social science.
 
 <div style="text-align:center" markdown="1"> 
-![SICSS-group-picture](../../images/SICSS_group_picture_edited.jpg)
+![SICSS-group-picture](../../images/SICSS_group_picture_edited.jpg "SICSS Group Picture")
 <figcaption>courtesy of Chris Bail's Twitter: <a href "https://pbs.twimg.com/media/DDmhKjEXUAAQ5J7.jpg" target= "_blank">https://pbs.twimg.com/media/DDmhKjEXUAAQ5J7.jpg</a></figcaption>
 <div>
 

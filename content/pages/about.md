@@ -13,7 +13,6 @@ If you are interested in contacting me, email: [kivan.polimis@gmail.com](mailto:
 
 <div style="text-align:center" markdown="1"> 
 ![Kivan](../../images/Kivan.jpg "Kivan")
-<figcaption>Kivan</figcaption>
 </div>
 
 <div style="text-align:left" markdown="1"> 

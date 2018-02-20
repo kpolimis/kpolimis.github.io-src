@@ -90,6 +90,7 @@ ENV/
 
 # plugins
 pelican-plugins/
+pelican-themes/
 _nb_header.html
 
 # Mac files

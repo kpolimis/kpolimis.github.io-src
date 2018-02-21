@@ -88,9 +88,12 @@ ENV/
 # Rope project settings
 .ropeproject
 
-# plugins
+# folders
 pelican-plugins/
 pelican-themes/
+output/theme/
+
+# files
 _nb_header.html
 
 # Mac files

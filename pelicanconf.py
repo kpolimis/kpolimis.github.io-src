@@ -31,7 +31,16 @@ GOOGLE_ANALYTICS = 'UA-104881568-1'
 
 # Theme and plugins
 # JINJA_FILTERS = {'sidebar': filters.sidebar}
-# THEME = "pelican-themes/html5-dopetrope"
+THEME = "pelican-themes/nest"
+
+# Minified CSS
+NEST_CSS_MINIFY = True
+
+NEST_HEADER_IMAGES = ''
+NEST_HEADER_LOGO = '/images/jade_mountain.png'
+
+MENUITEMS = [('Home', '/index.html'),('Articles','/categories.html'),
+('Vita','/pages/vita.html'), ('Software','/pages/software.html')]
 
 CODE_DIR = 'downloads/code'
 NOTEBOOK_DIR = 'downloads/notebooks'
@@ -40,8 +49,7 @@ READERS = {'html': None}
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['liquid_tags.notebook',  # for embedding notebooks
            'summary',       # auto-summarizing articles
-           'feed_summary',  # use summaries for RSS, not full articles
-           'latex'
+           'feed_summary'  # use summaries for RSS, not full articles
            ]
 # MARKUP = ('md', )
 

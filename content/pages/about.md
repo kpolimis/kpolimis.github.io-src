@@ -1,5 +1,5 @@
 ---
-Title: About
+Title: Home
 sortorder: 001
 save_as: index.html
 ---
@@ -11,9 +11,4 @@ Also, I'm passionate about growing the community of computational social scienti
 
 If you are interested in contacting me, email: [kivan.polimis@gmail.com](mailto:kivan.polimis@gmail.com)
 
-<div style="text-align:center" markdown="1"> 
-![Kivan](../../images/Kivan.jpg "Kivan")
-</div>
-
-<div style="text-align:left" markdown="1"> 
-
+<p style="text-align:center;"><img src="../../images/Kivan.jpg" alt="Kivan" style="width: 50%; height: 50%></p>

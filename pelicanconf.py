@@ -8,21 +8,16 @@ AUTHOR = u'Kivan Polimis'
 SITENAME = u'Kivan Polimis'
 # SITESUBTITLE = u'my personal musings and attempts to apply \
 # and share some programming tips'
-SITEURL = ''
 
 #INDEX_SAVE_AS = 'blog_index.html'
-
 PATH = 'content'
 PAGE_ORDER_BY = 'sortorder'
-
 
 # Times and dates
 TIMEZONE = 'US/Pacific'
 DEFAULT_LANG = u'en'
 
 SUMMARY_MAX_LENGTH = '50'
-
-
 GOOGLE_ANALYTICS = 'UA-104881568-1'
 
 # Set the article URL
@@ -41,6 +36,35 @@ NEST_HEADER_LOGO = '/images/jade_mountain.png'
 
 MENUITEMS = [('Home', '/index.html'),('Articles','/categories.html'),
 ('Vita','/pages/vita.html'), ('Software','/pages/software.html')]
+
+# categories.html
+NEST_CATEGORIES_HEAD_TITLE = u'Articles'
+NEST_CATEGORIES_HEAD_DESCRIPTION = u'Articles listed by category'
+NEST_CATEGORIES_HEADER_TITLE = u'Articles'
+NEST_CATEGORIES_HEADER_SUBTITLE = u'Articles listed by category'
+
+# software.html
+NEST_SOFTWARE_HEAD_TITLE = u'Software'
+NEST_SOFTWARE_HEAD_DESCRIPTION = u'Software'
+NEST_SOFTWARE_HEADER_TITLE = u'Software'
+# NEST_SOFTWARE_HEADER_SUBTITLE = u'Articles listed by category'
+
+# Footer
+NEST_SITEMAP_COLUMN_TITLE = u'Sitemap'
+NEST_SITEMAP_MENU = [('Home', '/index.html'),('Articles','/categories.html'),
+('Vita','/pages/vita.html'), ('Software','/pages/software.html')]
+NEST_SITEMAP_ATOM_LINK = u'Atom Feed'
+NEST_SITEMAP_RSS_LINK = u'RSS Feed'
+NEST_SOCIAL_COLUMN_TITLE = u'Social'
+NEST_LINKS_COLUMN_TITLE = u'Links'
+NEST_COPYRIGHT = u'&copy; Kivan Polimis 2018'
+# Footer optional
+NEST_FOOTER_HTML = ''
+
+# Static files
+STATIC_PATHS = ['images',  'favicon.ico']
+
+
 
 CODE_DIR = 'downloads/code'
 NOTEBOOK_DIR = 'downloads/notebooks'

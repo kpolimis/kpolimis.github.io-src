@@ -16,12 +16,12 @@ I chose to use Pelican instead of other Python alternatives after reading this <
 3. Connect Github and Travis-CI
 4. Create Github blog repository
 5. Make first blog post
-6. Deploy Travis-CI 
+6. Deploy Travis-CI
 
 # Create Github blog source repository #
 We will use two separate git repositories on Github for the source and the built website, let's first only create the repository for the source
 
-Login to Github and create a repository named: `<username>.github.io-src`. Initialize this repo with a README.md so you can clone immediately. The `<username>.github.io-src` repository is the source repo for the Pelican blog. 
+Login to Github and create a repository named: `<username>.github.io-src`. Initialize this repo with a README.md so you can clone immediately. The `<username>.github.io-src` repository is the source repo for the Pelican blog.
 
 # Virtual Environment Blogging
 I recommend creating a virtual environment to blog in for flexibility with Python package installations.
@@ -29,34 +29,34 @@ I recommend creating a virtual environment to blog in for flexibility with Pytho
 ~~~bash
 conda create -n blog python==3.5
 source activate blog
-~~~ 
+~~~
 
 # Install Pelican #
 ~~~bash
 pip install pelican
-~~~ 
+~~~
 
-Additional packages to install for website development 
+Additional packages to install for website development
 ~~~bash
 pip install markdown fabric beautifulsoup4 typogrify pillow webassets
-~~~ 
+~~~
 
 Change directory to `<username>.github.io-src` folder
 
 Run pelican-quickstart to set up the Pelican blogging platform. The screenshot below shows how to answer the quickstart questions to allow your blog to be hosted on Github.
-~~~bash 
+~~~bash
 pelican-quickstart  
-~~~ 
+~~~
 ![pelican-quickstart](../../images/pelican-quickstart.png)  
 
 Add requirements.txt for Pelican blog build on Travis
-~~~bash 
+~~~bash
 (echo pelican; echo markdown; echo fabric; echo beautifulsoup4; echo typogrify; echo pillow;
 echo webassets) >> requirements.txt  
 ~~~
 
 Create a .travis.yml file for Travis build
-~~~bash 
+~~~bash
 branches:
   only:
   - master
@@ -166,15 +166,15 @@ touch first-post.md
 
 Post follow the following format:
 ~~~bash
-Title: 
-Date: 
-Author: 
-Category: 
+Title:
+Date:
+Author:
+Category:
 ~~~
 
 See <a href ="http://docs.getpelican.com/en/3.6.3/index.html" target="_blank">Pelican documentation</a> for additional information on using Pelican to generate a static site.
 
-After writing an initial post, use `pelican` command to generate a static html webpage 
+After writing an initial post, use `pelican` command to generate a static html webpage
 ~~~bash
 cd ..
 pelican content
@@ -250,10 +250,10 @@ Workflow for posts
  - Run `pelican content`  
  - Add and commit new posts to `<username>.github.io-src` repository  
  - Use deploy.sh to automatically push `<username>.github.io-src` repository and build `<username>.github.io` website
- - Commit published posts from deploy.sh to `<username>.github.io` repository 
+ - Commit published posts from deploy.sh to `<username>.github.io` repository
 <br>
 
 # References #
 1. <a href ="http://docs.getpelican.com/en/3.6.3/index.html" target="_blank">Pelican documentation</a>
 2. notions and notes setup pelican <a href = "http://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html" target="_blank">blog post</a>
-3. <a href="http://zonca.github.io/2013/09/automatically-build-pelican-and-publish-to-github-pages.html" target="_blank">Automatically build pelican</a>with Travis CI
+3. <a href="http://zonca.github.io/2013/09/automatically-build-pelican-and-publish-to-github-pages.html" target="_blank"> Automatically build pelican</a> with Travis CI

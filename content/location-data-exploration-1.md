@@ -7,7 +7,4 @@ Title: Location Data Exploration #1
 
 {% notebook ../../downloads/notebooks/map_of_flights.ipynb cells[1:19] %}
 
-![flight-map](../../images/flights.png)
-
 {% notebook ../../downloads/notebooks/map_of_flights.ipynb cells[22:] %}
-

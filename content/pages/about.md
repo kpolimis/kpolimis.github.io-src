@@ -8,7 +8,7 @@ Welcome to my website. My name is Kivan and I am a recent Ph.D. graduate from th
 University of Washington. In Seattle, I worked with Data Science for Social Good
 and Microsoft to develop programming solutions in transportation infrastructure
 and the legal system. Currently, I work as a postdoctoral researcher at
-Universita Bocconi's <a href="http://www.dondena.unibocconi.it/wps/wcm/connect/Cdr/Centro_Dondena/Home">
+Università Bocconi's <a href="http://www.dondena.unibocconi.it/wps/wcm/connect/Cdr/Centro_Dondena/Home">
 Dondena Centre for Research on Social Dynamics and Public Policy</a> in Milan.
 I am also a postdoctoral affiliate at the Bocconi Institute for
 Data Science and Analytics <a href = "http://www.bidsa.unibocconi.eu/wps/wcm/connect/Site/Bidsa/Home">(BIDSA)</a>.

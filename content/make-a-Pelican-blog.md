@@ -1,5 +1,5 @@
 ---
-Title: make a Pelican blog
+Title: Make a Pelican Blog
 Date: 2016-3-24 17:07
 Author: Kivan Polimis
 Category: How-to

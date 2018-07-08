@@ -16,7 +16,7 @@ The example plot below describes the analysis and interactive plotting features.
 
 ## Interactive plotting
 
-[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org:/repo/kpolimis/nfl-combine-evaluation-plots)
+[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org:/repo/kpolimis/nfl-combine-evaluation-plots){:target=blank}
 
 Press the launch binder link above to open a jupyter notebook directory window.
 Select plots.ipynb to start an interactive notebook that plots the relationship between assorted Combine

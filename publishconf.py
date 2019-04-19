@@ -20,5 +20,5 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-SITEURL = 'http://kpolimis.github.io'
+SITEURL = 'https://kivanpolimis.com'
 DISQUS_SITENAME = 'kivanpolimis'

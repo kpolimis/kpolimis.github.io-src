@@ -4,7 +4,7 @@ sortorder: 001
 save_as: index.html
 ---
 <br>
-Welcome to my website. 
+Welcome to my website.
 
 My name is Kivan and I am a recent Ph.D. graduate from the
 University of Washington. In Seattle, I worked with Data Science for Social Good

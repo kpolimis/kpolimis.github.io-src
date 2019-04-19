@@ -34,9 +34,10 @@ NEST_CSS_MINIFY = True
 NEST_HEADER_IMAGES = ''
 NEST_HEADER_LOGO = '/images/jade_mountain.png'
 
-MENUITEMS = [('Home', '/index.html'),('Articles','/categories.html'),
-('Vita','/pages/vita.html'), ('Software','/pages/software.html'),
-('Projects','/pages/projects.html')]
+# MENUITEMS = [('Home', '/index.html'),('Articles','/categories.html'),
+# ('Vita','/pages/vita.html'), ('Software','/pages/software.html'),
+# ('Projects','/pages/projects.html')]
+
 
 # categories.html
 NEST_CATEGORIES_HEAD_TITLE = u'Articles'
@@ -87,7 +88,7 @@ LATEX = 'article'
 
 TWITTER_USERNAME = 'kpolimis'
 GITHUB_USERNAME = 'kpolimis'
-AUTHOR_CV = "http://kivanpolimis.com/docs/Polimis_Curriculum_Vitae.pdf"
+AUTHOR_CV = "http://kivanpolimis.com/docs/Kivan_Polimis_Curriculum_Vitae.pdf"
 SHOW_ARCHIVES = True
 
 IGNORE_FILES = ['.ipynb_checkpoints']

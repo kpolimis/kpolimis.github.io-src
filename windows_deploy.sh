@@ -13,7 +13,7 @@ if ["$TRAVIS_PULL_REQUEST" =="false" ]; then
         git config user.name "Travis"
     fi
     #using token clone gh-pages branch
-    git clone --depth 1 --quiet --branch=$BRANCH https://${GH_TOKEN}@github.com/$TARGET_REPO built_website > /dev/null
+    git clone --depth 1 --quiet --branch=$BRANCH https://${GH_TOKEN}github.com/$TARGET_REPO built_website > /dev/null
     #go into directory and copy data we're interested in to that directory
     cd built_website
     rsync -rv --exclude=.git  ../$PELICAN_OUTPUT_FOLDER/* .

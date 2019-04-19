@@ -9,7 +9,7 @@ SITENAME = u'Kivan Polimis'
 # SITESUBTITLE = u'my personal musings and attempts to apply \
 # and share some programming tips'
 
-# INDEX_SAVE_AS = 'pages/home.html'
+INDEX_SAVE_AS = 'pages/home.html'
 PATH = 'content'
 PAGE_ORDER_BY = 'sortorder'
 
@@ -34,12 +34,14 @@ NEST_CSS_MINIFY = True
 NEST_HEADER_IMAGES = ''
 NEST_HEADER_LOGO = '/images/jade_mountain.png'
 
-MENUITEMS = [('Articles', '/categories.html')]
+# MENUITEMS = [('Articles', '/categories.html')]
 
-# MENUITEMS = [('Home', '/index.html'),('Articles','/categories.html'),
-# ('Vita','/pages/vita.html'), ('Software','/pages/software.html'),
-# ('Projects','/pages/projects.html')]
 
+MENUITEMS = [('Home', '/index.html'),('Articles','/categories.html'),
+('Vita','/pages/vita.html'), ('Software','/pages/software.html'),
+('Projects','/pages/projects.html')]
+
+MENUITEMS = []
 
 # categories.html
 NEST_CATEGORIES_HEAD_TITLE = u'Articles'

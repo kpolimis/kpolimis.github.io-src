@@ -41,7 +41,8 @@ MENUITEMS = [('Home', '/index.html'),('Articles','/categories.html'),
 ('Vita','/pages/vita.html'), ('Software','/pages/software.html'),
 ('Projects','/pages/projects.html')]
 
-MENUITEMS = []
+MENUITEMS = [('Articles','/categories.html')]
+
 
 # categories.html
 NEST_CATEGORIES_HEAD_TITLE = u'Articles'

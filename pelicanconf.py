@@ -41,7 +41,7 @@ MENUITEMS = [('Home', '/index.html'),('Articles','/categories.html'),
 ('Vita','/pages/vita.html'), ('Software','/pages/software.html'),
 ('Projects','/pages/projects.html')]
 
-MENUITEMS = [('Articles','/categories.html')]
+# MENUITEMS = [('Articles','/categories.html')]
 
 
 # categories.html

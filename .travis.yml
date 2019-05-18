@@ -4,7 +4,7 @@ branches:
 before_install:
 #- git rm --cached pelican-plugins
 - git submodule add -f https://github.com/getpelican/pelican-plugins.git
-- git submodule add -f https://github.com/molivier/nest.git
+- git submodule add -f https://github.com/molivier/nest.git pelican-themes/nest
 #- git submodule update --init --recursive
 addons:
   apt:

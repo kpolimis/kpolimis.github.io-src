@@ -130,10 +130,14 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Setup">Setup<a class="anchor-link" href="#Setup">&#182;</a></h1><ol>
 <li>Use Google Takout to download your Google location history</li>
+</ol>
+<ul>
 <li>If you've previously enabled Google location reporting on your smartphone, your GPS data will be periodically uploaded to <a href="https://support.google.com/accounts/answer/3118687?hl=en&amp;visit_id=1-636109809748631344-4285616029&amp;rd=1">Google's servers</a>. Use Google Takeout to download your location history.<ul>
 <li>The decisions of when and how to upload this data are entirely obfuscated to the end user, but as you'll see below, Android appears to upload a GPS location every 60 seconds. That's plenty of data to work with.</li>
 </ul>
 </li>
+</ul>
+<ol>
 <li>After downloading your data, install the required modules</li>
 </ol>
 <h2 id="Google-Takeout">Google Takeout<a class="anchor-link" href="#Google-Takeout">&#182;</a></h2><p>Google <a href="https://takeout.google.com/settings/takeout">Takeout</a> is a Google service that allows users to export any personal Google data. We'll use Takeout to download our raw location history as a one-time snapshot. Since Latitude was retired, no API exists to access location history in real-time.</p>
@@ -954,7 +958,7 @@ total data points in the city shape file for this period: 295384
 <span class="n">cbar</span> <span class="o">=</span> <span class="n">custom_colorbar</span><span class="p">(</span><span class="n">cmap</span><span class="p">,</span> <span class="n">ncolors</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">jenks_labels</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">jenks_labels</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 
-<span class="n">current_date</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;printed: %a, </span><span class="si">%d</span><span class="s2"> %b %Y&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span>
+<span class="n">current_date</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;printed: </span><span class="si">%a</span><span class="s2">, </span><span class="si">%d</span><span class="s2"> %b %Y&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Time Spent in Seattle Neighborhoods&quot;</span><span class="p">,</span>
              <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -6341,7 +6345,7 @@ CBFCCCGEU0gQIoQQQginkCBECCGEEE7x/5HV3/gNWSNFAAAAAElFTkSuQmCC
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;System and module version information: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Python version: </span><span class="se">\n</span><span class="s1"> </span><span class="si">{}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;last updated: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%a, </span><span class="si">%d</span><span class="s2"> %b %Y %H:%M&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;last updated: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%a</span><span class="s2">, </span><span class="si">%d</span><span class="s2"> %b %Y %H:%M&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())))</span>
 </pre></div>
 
 </div>

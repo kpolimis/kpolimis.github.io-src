@@ -26,7 +26,7 @@ GOOGLE_ANALYTICS = 'UA-104881568-1'
 
 # Theme and plugins
 # JINJA_FILTERS = {'sidebar': filters.sidebar}
-THEME = "../pelican-themes/nest"
+THEME = "pelican-themes/nest"
 
 # Minified CSS
 NEST_CSS_MINIFY = True
@@ -34,15 +34,11 @@ NEST_CSS_MINIFY = True
 NEST_HEADER_IMAGES = ''
 NEST_HEADER_LOGO = '/images/jade_mountain.png'
 
-# MENUITEMS = [('Articles', '/categories.html')]
-
-
+DISPLAY_PAGES_ON_MENU = False
+# MENUITEMS = [('Home', '/index.html'), ('Articles', '/categories.html')]
 MENUITEMS = [('Home', '/index.html'),('Articles','/categories.html'),
 ('Vita','/pages/vita.html'), ('Software','/pages/software.html'),
 ('Projects','/pages/projects.html')]
-
-# MENUITEMS = [('Articles','/categories.html')]
-
 
 # categories.html
 NEST_CATEGORIES_HEAD_TITLE = u'Articles'
@@ -71,8 +67,6 @@ NEST_FOOTER_HTML = ''
 
 # Static files
 STATIC_PATHS = ['images',  'favicon.ico']
-
-
 
 CODE_DIR = 'downloads/code'
 NOTEBOOK_DIR = 'downloads/notebooks'
@@ -116,9 +110,11 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Title menu options
-#MENUITEMS = [('Archives', '/archives.html'),
-#             ('Home Page', 'http://<homepage>)]
-#NEWEST_FIRST_ARCHIVES = False
+
+DEFAULT_PAGINATION = 10
+
+# Uncomment following line if you want document-relative URLs when developing
+RELATIVE_URLS = True
 
 # Blogroll
 #LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -129,28 +125,3 @@ AUTHOR_FEED_RSS = None
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
 #          ('Another social link', '#'),)
-
-DEFAULT_PAGINATION = 10
-
-# Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
-
-
-#ARCHIVES_URL = "blog"
-#ARCHIVES_SAVE_AS = "blog/index.html"
-
-#PAGE_DIR = 'pages'
-#PAGE_URL = '{slug}'
-#PAGE_SAVE_AS = '{slug}/index.html'
-
-#CATEGORY_URL = "category/{slug}/"
-#CATEGORY_SAVE_AS = "category/{slug}/index.html"
-
-#TAG_URL = "tag/{slug}/"
-#TAG_SAVE_AS = "tag/{slug}/index.html"
-
-#STATIC_PATHS = ['images',
-#                'fonts',
-#                'css',
-#                'js',
-#                ]

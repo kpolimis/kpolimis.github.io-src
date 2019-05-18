@@ -94,7 +94,6 @@ pelican-themes/
 output/theme/
 
 # files
-_nb_header.html
 
 # Mac files
 *.DS_Store

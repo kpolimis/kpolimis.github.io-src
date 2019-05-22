@@ -4,5 +4,6 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/built_website" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pelican-plugins" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pelican-themes/nest" vcs="Git" />
   </component>
 </project>

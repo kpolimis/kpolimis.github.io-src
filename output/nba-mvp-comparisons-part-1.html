@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="NBA MVP Comparisons¶ 25 th December 2018 It&#39;s Christmas and that means a full slate of NBA games. This time of year also provokes some great NBA discussions and the best NBA discussions are...">
+        <meta name="description" content="NBA MVP Comparisons¶Part 1¶ 25 th December 2018 It&#39;s Christmas and that means a full slate of NBA games. This time of year also provokes some great NBA discussions and the best NBA discussions are...">
         <meta name="keywords" content="">
         <link rel="icon" href="./favicon.ico">
 
@@ -67,7 +67,7 @@
               <div class="col-lg-12">
                   <div class="header-content">
                       <h1 class="header-title">NBA MVP Comparisons - Part 1</h1>
-                      <p class="header-date"> <a href="./author/kivan-polimis.html">Kivan Polimis</a>, Tue 25 December 2018,  <a href="./category/projects.html">Projects</a></p>
+                      <p class="header-date"> <a href="./author/kivan-polimis.html">Kivan Polimis</a>, Tue 25 December 2018,  <a href="./category/sports.html">Sports</a></p>
                       <div class="header-underline"></div>
                       <div class="clearfix"></div>
                       <p class="pull-right header-tags">
@@ -91,7 +91,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="NBA-MVP-Comparisons">NBA MVP Comparisons<a class="anchor-link" href="#NBA-MVP-Comparisons">&#182;</a></h1><ul>
+<h1 id="NBA-MVP-Comparisons">NBA MVP Comparisons<a class="anchor-link" href="#NBA-MVP-Comparisons">&#182;</a></h1><h2 id="Part-1">Part 1<a class="anchor-link" href="#Part-1">&#182;</a></h2><ul>
 <li>25 <sup>th</sup> December 2018</li>
 </ul>
 
@@ -103,11 +103,12 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It's Christmas and that means a full slate of NBA games. This time of year also provokes some great NBA discussions and the best NBA discussions are comparative. Arguments like: would Jordan's '96 Bulls would beat the '17 Warriors?</p>
-<p>Another comparison that is sure to create great debate is who had the best (or worst) Most Valuable Player (MVP) season in history? This question has a strong empirical dimension, in that we can observe quantifiable aspects across seasons, and can leverage programming to both gather and and analyze the data. The MVP data will gather comes from <a href="https://www.basketball-reference.com">basketball-reference.com</a>. Basketball-reference is part of the Sports-Reference sites, "a group of sites providing both basic and sabermetric statistics and resources for sports fans everywhere. [Sports-reference aims] to be the easiest-to-use, fastest, most complete sources for sports statistics anywhere" (<a href="https://www.sports-reference.com/">sports-reference.com</a>).</p>
+<p>Another comparison that is sure to create great debate is who had the best (or worst) Most Valuable Player (MVP) season in history? This question has a strong empirical dimension, in that we can observe quantifiable aspects across seasons, and can leverage programming to both gather and and analyze the data.</p>
+<p>The MVP data will gather comes from <a href="https://www.basketball-reference.com">basketball-reference.com</a>. Basketball-reference is part of the Sports-Reference sites, "a group of sites providing both basic and sabermetric statistics and resources for sports fans everywhere. [Sports-Reference aims] to be the easiest-to-use, fastest, most complete sources for sports statistics anywhere" (<a href="https://www.sports-reference.com/">sports-reference.com</a>).</p>
 <p>In this post, we will gather all the data for the a multi-part series to determine:</p>
 <ol>
-<li>the MVP finalist the had the best case for winning that year</li>
 <li>the best MVP season of all time</li>
+<li>the MVP finalist the had the best case for winning that year</li>
 </ol>
 <p>Let the shade begin</p>
 
@@ -1174,7 +1175,7 @@ formatted column names in finalist table: [&#39;Rank&#39;, &#39;Player&#39;, &#3
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">loop_start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="n">loop_start</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">loop_start</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1187,15 +1188,13 @@ formatted column names in finalist table: [&#39;Rank&#39;, &#39;Player&#39;, &#3
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[16]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>datetime.datetime(2019, 5, 22, 18, 28, 3, 685242)</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2019-05-25 15:10:57.567450
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -1242,7 +1241,7 @@ formatted column names in finalist table: [&#39;Rank&#39;, &#39;Player&#39;, &#3
         <span class="n">year_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">column_headers</span>
         <span class="n">year_df</span> <span class="o">=</span> <span class="n">year_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">year_df</span><span class="p">[</span><span class="s2">&quot;Pts Max&quot;</span><span class="p">]</span><span class="o">==</span><span class="n">year_df</span><span class="p">[</span><span class="s2">&quot;Pts Max&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()[</span><span class="mi">0</span><span class="p">]]</span>
 
-        <span class="c1"># add the year of the pssing data to the dataframe</span>
+        <span class="c1"># add the year of the MVP finalist data to the dataframe</span>
         <span class="n">year_df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
  
         <span class="c1"># append the current dataframe to the list of dataframes</span>
@@ -1284,8 +1283,8 @@ formatted column names in finalist table: [&#39;Rank&#39;, &#39;Player&#39;, &#3
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2019-05-22 18:28:58.632827
-the loop took 0:00:54.947585
+<pre>2019-05-25 15:12:03.441050
+the loop took 0:01:05.873600
 </pre>
 </div>
 </div>
@@ -1299,7 +1298,7 @@ the loop took 0:00:54.947585
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>the loop took ~ 19 seconds</li>
+<li>the loop took ~ 1 minute</li>
 </ul>
 
 </div>
@@ -2026,14 +2025,14 @@ Name: 0, dtype: object</pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mvp_data_columns_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Season&#39;</span><span class="p">:</span><span class="s1">&#39;season&#39;</span><span class="p">,</span> <span class="s1">&#39;Lg&#39;</span><span class="p">:</span><span class="s1">&#39;league&#39;</span><span class="p">,</span> <span class="s1">&#39;Player&#39;</span><span class="p">:</span><span class="s1">&#39;player&#39;</span><span class="p">,</span> <span class="s1">&#39;Voting&#39;</span><span class="p">:</span> <span class="s1">&#39;voting&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">:</span> <span class="s1">&#39;team&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span>
-                         <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="s1">&#39;games_played&#39;</span><span class="p">,</span> <span class="s1">&#39;MP&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_mintues&#39;</span><span class="p">,</span> <span class="s1">&#39;PTS&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_points&#39;</span><span class="p">,</span>  <span class="s1">&#39;TRB&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_rebounds&#39;</span><span class="p">,</span> 
+                         <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="s1">&#39;games_played&#39;</span><span class="p">,</span> <span class="s1">&#39;MP&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_minutes&#39;</span><span class="p">,</span> <span class="s1">&#39;PTS&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_points&#39;</span><span class="p">,</span>  <span class="s1">&#39;TRB&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_rebounds&#39;</span><span class="p">,</span> 
                          <span class="s1">&#39;AST&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_assists&#39;</span><span class="p">,</span> <span class="s1">&#39;STL&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_steals&#39;</span><span class="p">,</span> <span class="s1">&#39;BLK&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_blocks&#39;</span><span class="p">,</span> <span class="s1">&#39;FG%&#39;</span><span class="p">:</span> <span class="s1">&#39;field_goal_pct&#39;</span><span class="p">,</span>
                          <span class="s1">&#39;3P%&#39;</span><span class="p">:</span> <span class="s1">&#39;three_pt_pct&#39;</span><span class="p">,</span> <span class="s1">&#39;FT%&#39;</span><span class="p">:</span> <span class="s1">&#39;free_throw_pct&#39;</span><span class="p">,</span> <span class="s1">&#39;WS&#39;</span><span class="p">:</span> <span class="s1">&#39;win_shares&#39;</span><span class="p">,</span>
                          <span class="s1">&#39;WS/48&#39;</span><span class="p">:</span> <span class="s1">&#39;win_shares_per_48&#39;</span>
                         <span class="p">}</span>
 <span class="n">mvp_finalist_columns_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Year&#39;</span><span class="p">:</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;Player&#39;</span><span class="p">:</span><span class="s1">&#39;player&#39;</span><span class="p">,</span> <span class="s1">&#39;Rank&#39;</span><span class="p">:</span> <span class="s1">&#39;rank&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">:</span> <span class="s1">&#39;team&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span>
                              <span class="s1">&#39;First&#39;</span><span class="p">:</span> <span class="s1">&#39;first_place_votes&#39;</span><span class="p">,</span> <span class="s1">&#39;Pts Won&#39;</span><span class="p">:</span> <span class="s1">&#39;points_won&#39;</span><span class="p">,</span> <span class="s1">&#39;Pts Max&#39;</span><span class="p">:</span> <span class="s1">&#39;points_max&#39;</span><span class="p">,</span>
-                             <span class="s1">&#39;Share&#39;</span><span class="p">:</span><span class="s1">&#39;vote_share&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="s1">&#39;games_played&#39;</span><span class="p">,</span> <span class="s1">&#39;MP&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_mintues&#39;</span><span class="p">,</span> <span class="s1">&#39;PTS&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_points&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;Share&#39;</span><span class="p">:</span><span class="s1">&#39;vote_share&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="s1">&#39;games_played&#39;</span><span class="p">,</span> <span class="s1">&#39;MP&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_minutes&#39;</span><span class="p">,</span> <span class="s1">&#39;PTS&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_points&#39;</span><span class="p">,</span>
                              <span class="s1">&#39;TRB&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_rebounds&#39;</span><span class="p">,</span> <span class="s1">&#39;AST&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_assists&#39;</span><span class="p">,</span> <span class="s1">&#39;STL&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_steals&#39;</span><span class="p">,</span> <span class="s1">&#39;BLK&#39;</span><span class="p">:</span> <span class="s1">&#39;avg_blocks&#39;</span><span class="p">,</span>
                              <span class="s1">&#39;FG%&#39;</span><span class="p">:</span> <span class="s1">&#39;field_goal_pct&#39;</span><span class="p">,</span>  <span class="s1">&#39;3P%&#39;</span><span class="p">:</span> <span class="s1">&#39;three_pt_pct&#39;</span><span class="p">,</span> <span class="s1">&#39;FT%&#39;</span><span class="p">:</span> <span class="s1">&#39;free_throw_pct&#39;</span><span class="p">,</span> <span class="s1">&#39;WS&#39;</span><span class="p">:</span> <span class="s1">&#39;win_shares&#39;</span><span class="p">,</span>
                              <span class="s1">&#39;WS/48&#39;</span><span class="p">:</span> <span class="s1">&#39;win_shares_per_48&#39;</span>
@@ -2094,7 +2093,7 @@ Name: 0, dtype: object</pre>
       <th>age</th>
       <th>team</th>
       <th>games_played</th>
-      <th>avg_mintues</th>
+      <th>avg_minutes</th>
       <th>avg_points</th>
       <th>avg_rebounds</th>
       <th>avg_assists</th>
@@ -2464,7 +2463,7 @@ voting               73 non-null object
 age                  73 non-null float64
 team                 73 non-null object
 games_played         73 non-null float64
-avg_mintues          73 non-null float64
+avg_minutes          73 non-null float64
 avg_points           73 non-null float64
 avg_rebounds         73 non-null float64
 avg_assists          73 non-null float64
@@ -2522,7 +2521,7 @@ points_won           972 non-null float64
 points_max           972 non-null int64
 vote_share           972 non-null float64
 games_played         972 non-null int64
-avg_mintues          972 non-null float64
+avg_minutes          972 non-null float64
 avg_points           972 non-null float64
 avg_rebounds         972 non-null float64
 avg_assists          972 non-null float64
@@ -2606,7 +2605,7 @@ points_won           972 non-null float64
 points_max           972 non-null int64
 vote_share           972 non-null float64
 games_played         972 non-null int64
-avg_mintues          972 non-null float64
+avg_minutes          972 non-null float64
 avg_points           972 non-null float64
 avg_rebounds         972 non-null float64
 avg_assists          972 non-null float64
@@ -2741,7 +2740,7 @@ memory usage: 167.1+ KB
       <th>age</th>
       <th>team</th>
       <th>games_played</th>
-      <th>avg_mintues</th>
+      <th>avg_minutes</th>
       <th>avg_points</th>
       <th>avg_rebounds</th>
       <th>avg_assists</th>
@@ -3135,7 +3134,7 @@ memory usage: 167.1+ KB
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>last updated: 2019-05-22 18:29 
+<pre>last updated: 2019-05-25 15:12 
 
 System and module version information: 
 

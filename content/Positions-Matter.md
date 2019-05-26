@@ -1,6 +1,6 @@
 ---
 Author: Kivan Polimis
-Category: Projects
+Category: Sports
 Date: '2016-8-1 3:06'
 Title: Positions Matter
 ---

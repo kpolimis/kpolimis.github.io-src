@@ -1,6 +1,6 @@
 ---
 Author: Kivan Polimis
-Category: Projects
+Category: Sports
 Date: '2018-12-25 6:30'
 Title: NBA MVP Comparisons - Part 1
 ---

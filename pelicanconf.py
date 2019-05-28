@@ -75,8 +75,11 @@ READERS = {'html': None}
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['liquid_tags.notebook',  # for embedding notebooks
            'summary',       # auto-summarizing articles
-           'feed_summary'  # use summaries for RSS, not full articles
+           'feed_summary',  # use summaries for RSS, not full articles
+           'render_math'
            ]
+
+MD_EXTENSIONS = ['codehilite(css_class=highlight)','extra', 'mathjax']
 # MARKUP = ('md', )
 
 # Only use LaTeX for selected articles

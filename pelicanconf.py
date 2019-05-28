@@ -79,9 +79,7 @@ PLUGINS = ['liquid_tags.notebook',  # for embedding notebooks
            'render_math'
            ]
 
-MD_EXTENSIONS = ['codehilite(css_class=highlight)','extra', 'mathjax']
-# MARKUP = ('md', )
-
+MD = ['codehilite(css_class=highlight)','extra', 'mathjax']
 # Only use LaTeX for selected articles
 
 LATEX = 'article'

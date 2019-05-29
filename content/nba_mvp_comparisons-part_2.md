@@ -3,7 +3,6 @@ Author: Kivan Polimis
 Category: Sports
 Date: '2019-2-27 9:12'
 Title: NBA MVP Comparisons - Part 2
-Status: draft
 ---
 
 <script type="text/x-mathjax-config">
@@ -20,7 +19,7 @@ Status: draft
 </head>
 
 NBA MVP Comparisons - Part 2
-===========================
+============================
 
 Part 2
 ------
@@ -29,57 +28,63 @@ Part 2
 
 In the previous post, [Part
 1](http://www.kivanpolimis.com/nba-mvp-comparisons-part-1.html) of the
-NBA MVP series, we gathered the relevant NBA finalist data from
+NBA MVP Comparison series, we gathered the relevant NBA MVP finalist
+data from
 [basketball-reference.com](https://www.basketball-reference.com/) and
 processed it.
 
-Before going further, it is important to note that all analysis in this
-post deals with MVP finalists from 1983 to the present (2018). This
+Before going further, it is important to note that all analysis in Part
+2 deals with MVP finalists from 1983 to the present (2018). This
 decision was made to separate the pre-3 point era from the post-3 point
 era which analytically and stylistically have different types of
 players.
 
-Our goal with this blog post is to understand which MVP finalist got
-robbed of an MVP award. To do this, we will predict the continuous
-dependent variable, vote share (ranging from 0 to 1), of a MVP finalist
-with a vector (list) of the following predictors (independent variables)
-from the processed MVP finalist data: age, games\_played, avg\_minutes,
-avg\_points, avg\_rebounds, avg\_assists, avg\_steals, avg\_blocks,
-field\_goal\_pct, three\_pt\_pct, free\_throw\_pct, win\_shares,
-win\_shares\_per\_48. The specific questions that will allow us to
-assess which finalist was most deserving of a MVP award are:
+Our goal with this blog post is to understand which MVP finalist, but
+non-MVP winner was most deserving of the award. To do this, we will
+predict the continuous dependent variable, vote share (ranging from 0 to
+1), of a MVP finalist with a vector (list) of the following predictors
+(independent variables) from the processed MVP finalist data: age,
+games\_played, avg\_minutes, avg\_points, avg\_rebounds, avg\_assists,
+avg\_steals, avg\_blocks, field\_goal\_pct, three\_pt\_pct,
+free\_throw\_pct, win\_shares, win\_shares\_per\_48.
 
-1.  Which MVP finalists had a predicted vote share greater than that
-    year's winner?
-2.  Which MVP winner had the lowest predicted vote share?
+The specific questions that will allow us to assess which finalist was
+most deserving of a MVP award are:
+
+1.  Which MVP winner(s) outperformed their predicted vote share?
+2.  Which MVP winner(s) should have finished second to another finalist
+    in predicted vote share?
 
 In this post, we will:
 
 1.  Compare machine learning (ML) models for selecting the MVP award
-2.  Compare the finalists deserving of an MVP award
+2.  Identify the finalists deserving of a MVP award
+
+While the language of statistical models deals more with over- and
+under-performance, I will interchange these terms with more colloquial
+language such as robbed/robbery.
 
 Outline
 -------
 
-1.  Compare Regression Models
+1.  Compare Machine Learning Regression Models
 2.  Determine Controversial MVPs
-3.  Rechose MVPs
+3.  Choose New MVPs
 
 Models Overview
 ---------------
 
 -   Which model did well?
--   Which MVPs did the model excel at predicting?
--   Which MVPs did the model struggle with predicting?
--   To predict MVP awards and vote share, I used regression models. I
-    split the MVP data into training (80%) and test datasets (20%) for
-    the machine learning (ML) models. The models are trained on the
-    training set and then compared on how well they predict the MVPs in
-    the test set.
--   The ML models were compared with the metric Root Mean Square Error
-    (RMSE).
+-   To predict MVP awards and vote share, I used machine learning (ML)
+    regression models
+-   [Machine learning](https://www.coursera.org/learn/machine-learning)
+    refers to algorithms and models that perform predictions with
+    advanced pattern recognition/correlations and are devoid of explicit
+    human programming
+-   ML models were compared with the metric Root Mean Square Error
+    (RMSE)
 
-ML Regression models
+### ML Regression Models
 
 -   [Random Forest
     Regressor](https://en.wikipedia.org/wiki/Random_forest)
@@ -87,7 +92,7 @@ ML Regression models
         creates a mean prediction of the individual trees
 -   [Latent Discriminant
     Analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
-    -   Uses a linear combination of features two separate two or more
+    -   Uses a linear combination of features to separate two or more
         classes
 -   [Gradient Boost](https://en.wikipedia.org/wiki/Gradient_boosting)
     -   Uses "weak learners", predicts loosely correlated with outcome
@@ -95,26 +100,27 @@ ML Regression models
         learners" with optimization
 -   [XGBoost](https://www.kdnuggets.com/2017/10/xgboost-top-machine-learning-method-kaggle-explained.html)
     -   Gradient boosting method "robust enough to support fine tuning
-        and addition of regularization parameters".
+        and addition of regularization parameters"
 
-Compare Regression Models
--------------------------
+Compare ML Regression Models
+----------------------------
 
-1.  Which MVP finalists had a predicted vote share greater than that
-    year's winner?
-2.  Which MVP winner had the lowest predicted vote share?
+-   To prepare the data for the ML models:
+    -   I split the MVP data into training (80%) and test datasets (20%)
+    -   The models are trained (learn the patterns) on the training set
+        and then compared on how well they predict the MVPs in the test
+        set
+-   Why Root Mean Square Error
+    [(RMSE)](https://www.statisticshowto.datasciencecentral.com/rmse/)?
 
--   Why
-    [RMSE](https://www.statisticshowto.datasciencecentral.com/rmse/)?
-
-$$ RMSE = \\sqrt{\\frac{1}{n}\\sum\_{i=1}^{n}(Predicted\_{i} - Actual\_{i})^2} $$
+$$ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(Actual_{i} - Predicted_{i})^2} $$
 
 -   RMSE is the square root of the average of squared differences
     between predicted values and actual observation. The RMSE ranges
     from 0 to ∞ and the direction (positive/negative) of the residual
     (Prediction - Actual) is inconsequential because the residual is
     squared. Lower RMSE correspond with better performing models.
--   RMSE equation as a function in R
+-   RMSE equation as a function in R:
 
 <!-- -->
 
@@ -122,10 +128,6 @@ $$ RMSE = \\sqrt{\\frac{1}{n}\\sum\_{i=1}^{n}(Predicted\_{i} - Actual\_{i})^2} $
       RMSE = sqrt(sum(mean(actual-predicted)^2))
       return(RMSE)
       }
-
--   The Latent Discriminant Analysis (LDA) was the best performing
-    model.
--   Henceforth, "the model" will refer to the LDA model
 
 <table style="width:53%;">
 <caption>RMSE Table</caption>
@@ -163,6 +165,10 @@ $$ RMSE = \\sqrt{\\frac{1}{n}\\sum\_{i=1}^{n}(Predicted\_{i} - Actual\_{i})^2} $
 </tbody>
 </table>
 
+-   The Latent Discriminant Analysis (LDA) was the best performing
+    model
+-   Henceforth, "the model" will refer to the LDA model
+
 ### Latent Discriminant Analysis (LDA)
 
 Because our predicted variable, vote share, is continuous we need a rule
@@ -175,8 +181,8 @@ article](https://www.nbcsports.com/washington/wizards/how-are-nba-playoff-seedin
 Perhaps we could adopt similar rules for vote share ties; fortunately
 for this analysis, there were no ties.
 
--   use `dplyr` library and `ifelse` function within `mutate` to create
-    binary LDA MVP variable based on our rule
+-   Use `dplyr` library and `ifelse` function within `mutate`
+    -   Create the binary LDA MVP variable based on our rule
 
 <!-- -->
 
@@ -187,9 +193,10 @@ for this analysis, there were no ties.
 
 -   What did the LDA model do well?
     -   30 of 36 MVPs accurately predicted with LDA vote share model
--   How do we find "struggle" within these models?
-    -   LDA predict another player that year with higher vote share/MVP
-        award
+-   How do we find where the model "struggled"?
+    -   LDA unsuccessfully predicts MVP
+    -   LDA predicts another player that year with higher vote share as
+        a better candidate for the MVP
 
 <table>
 <caption>LDA Correct MVP Predictions</caption>
@@ -519,12 +526,31 @@ for this analysis, there were no ties.
 </tbody>
 </table>
 
+<br></br>
+    
+<img src="../../images/age_vote_share_bivariate.png" style="display: block; margin: auto;" />
+
+-   Green dots represent MVP winners successfully predicted by the model
+-   Red dots represent MVP winners the model missed
+-   MVP winners are clustered between ages 27 and 29
+-   Older winners average lower vote share
+-   The model struggled with predicting older MVP winners
+
 ### Controversial MVPs
 
--   Select MVPs that LDA missed
--   Create additional column for residual or squared error
-    -   absolute value of the difference between actual vote share and
-        predicted vote share for a MVP finalist
+1.  Which MVP winner(s) outperformed their predicted vote share?
+2.  Which MVP winner(s) should have finished second to another finalist
+    in predicted vote share?  
+
+Identify controversial MVPs
+Identify controversial MVPs
+
+-   Select MVPs that the LDA model missed
+-   Create additional column for residual or error
+    -   Absolute value of the difference between actual and predicted
+        vote share for a MVP finalist
+-   Residuals help us determine how much a player over- or
+    under-performed relative to our model
 
 <!-- -->
 
@@ -532,7 +558,7 @@ for this analysis, there were no ties.
       mutate(Residual = abs(`Vote Share`-`LDA Prediction`))
 
 <table>
-<caption>Overhyped MVPs</caption>
+<caption>Controversial MVPs</caption>
 <colgroup>
 <col width="18%" />
 <col width="6%" />
@@ -619,27 +645,30 @@ for this analysis, there were no ties.
 </tbody>
 </table>
 
--   Steve Nash and Karl Malone are repeat offenders!
+-   Steve Nash (2005, 2006) and Karl Malone (1997, 1999) are repeat
+    offenders!
 -   A quick note on Larry in 1984 and Magic in 1990:
     -   Larry had the highest residual (0.511), overperformance, of any
-        MVP candidate and Magic Johnson was second with a residual of
-        0.173. Can't tell a story of basketball without tying Larry and
-        Magic together.
+        MVP winner
+    -   Magic Johnson owns the second highest winner residual of 0.173.
+    -   Can't tell a story of basketball without tying Larry and Magic
+        together.
 -   The controversial MVP discussion will focus on Malone and Nash
--   Whom did the models prefer in 1984, 1990. 1997, 1999, 2005, and
+-   Whom did the models prefer in 1984, 1990, 1997, 1999, 2005, and
     2006?
 
 <table>
-<caption>Rechosen MVPs</caption>
+<caption>LDA Preferred MVPs</caption>
 <colgroup>
-<col width="20%" />
+<col width="19%" />
 <col width="6%" />
 <col width="7%" />
 <col width="7%" />
-<col width="14%" />
-<col width="18%" />
-<col width="12%" />
-<col width="12%" />
+<col width="7%" />
+<col width="13%" />
+<col width="17%" />
+<col width="11%" />
+<col width="11%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -647,6 +676,7 @@ for this analysis, there were no ties.
 <th align="center">Age</th>
 <th align="center">Year</th>
 <th align="center">Team</th>
+<th align="center">Rank</th>
 <th align="center">Vote Share</th>
 <th align="center">LDA Prediction</th>
 <th align="center">Residual</th>
@@ -659,6 +689,7 @@ for this analysis, there were no ties.
 <td align="center">27</td>
 <td align="center">1984</td>
 <td align="center">NYK</td>
+<td align="center">2</td>
 <td align="center">0.491</td>
 <td align="center">0.491</td>
 <td align="center">0</td>
@@ -669,6 +700,7 @@ for this analysis, there were no ties.
 <td align="center">26</td>
 <td align="center">1990</td>
 <td align="center">PHI</td>
+<td align="center">2</td>
 <td align="center">0.667</td>
 <td align="center">0.667</td>
 <td align="center">0</td>
@@ -679,6 +711,7 @@ for this analysis, there were no ties.
 <td align="center">33</td>
 <td align="center">1997</td>
 <td align="center">CHI</td>
+<td align="center">2</td>
 <td align="center">0.832</td>
 <td align="center">0.934</td>
 <td align="center">0.102</td>
@@ -689,6 +722,7 @@ for this analysis, there were no ties.
 <td align="center">26</td>
 <td align="center">1999</td>
 <td align="center">LAL</td>
+<td align="center">6</td>
 <td align="center">0.075</td>
 <td align="center">0.888</td>
 <td align="center">0.813</td>
@@ -699,6 +733,7 @@ for this analysis, there were no ties.
 <td align="center">32</td>
 <td align="center">2005</td>
 <td align="center">MIA</td>
+<td align="center">2</td>
 <td align="center">0.813</td>
 <td align="center">0.813</td>
 <td align="center">0</td>
@@ -709,6 +744,7 @@ for this analysis, there were no ties.
 <td align="center">29</td>
 <td align="center">2006</td>
 <td align="center">DET</td>
+<td align="center">5</td>
 <td align="center">0.344</td>
 <td align="center">0.977</td>
 <td align="center">0.633</td>
@@ -717,41 +753,58 @@ for this analysis, there were no ties.
 </tbody>
 </table>
 
+-   The model preferred 2<sup>nd</sup> place finishers in 4 of 6
+    controversial MVP years
+-   1984 projects as the only year a potential MVP (Bernard King) would
+    not have a vote share majority
+
 ### The Robbers
 
--   Although Karl Malone and Steve Nash both stole 2 MVPs, I'm going to
-    focus on Steve Nash because Malone's predicted vote share in our
-    model doesn't change, our model predicts that two players were
-    overlooked in his winning years.
--   One such overlooked player was Michael Jordan in 1997.
-    -   That would've been Jordan's 7<sup>th</sup> MVP, maybe voter
-        fatigue was a factor in denying Jordan his 7<sup>th</sup> MVP
-        for Malone's first.
+-   Although Karl Malone and Steve Nash both "stole" 2 MVPs, I'm going
+    to focus on Steve Nash
+-   Steve Nash draws more scrutiny because Malone's predicted vote share
+    in our model doesn't change
+    -   Our model predicts that two players were overlooked in his
+        winning years
+-   One such overlooked player was Michael Jordan in 1997
+    -   Jordan would go on to win the 1998 MVP award
+    -   If Jordan had won the 1997 award, his legacy could have spanned
+        seven MVPs
+    -   Maybe voter fatigue was a factor in denying Jordan his
+        6<sup>th</sup> MVP (at that time) for Malone's first
 -   Contrastingly, our model shows that Steve Nash overperformed in one
-    year and should have faced a finalist with better vote share in
-    another.
+    year
+    -   Nash also should have faced a finalist with better vote share en
+        route to his second MVP
 -   Our model suggests that Steve Nash overperformed in 2005 by 0.1
-    where Malone never overperformed.
+    where Malone never overperformed
 
 ### The Robbed
 
 -   Shaq and Chauncey Billups wildly underperformed in 2 years the model
-    had them as clear favorites.
+    had them as clear favorites
 -   Shaq has the most beef as the only player robbed of two potential
     MVPs
--   Shaq had the highest residual prediction value (0.813) meaning that
-    he was the most underrated MVP finalist ever in his 1999 campaign.
--   Shaq also loses an MVP in 2005 when our model suggests that Steve
+-   Shaq recorded the highest residual prediction value (0.813)
+    -   Shaq was the most underrated MVP finalist ever in his 1999
+        campaign
+-   Shaq also loses a MVP in 2005 when our model suggests that Steve
     Nash overperformed
--   Chauncey had the second highest residual of 0.633 and could be the
-    rightful owner of Steve Nash's second MVP
+-   Chauncey in 2006 had the second highest residual of 0.633 and could
+    be the rightful owner of Steve Nash's second MVP
 
 Review
 ------
 
--   We compared multiple machine learning classification and regression
-    algorithms to determine NBA MVP/MVP vote share
+-   We compared multiple machine learning regression models to determine
+    MVP/MVP vote share
 -   Concluded that Steve Nash and Karl Malone repeatedly robbed
     deserving MVP candidates
 -   Predicted that Larry Bird had the most over-inflated vote share of
-    any NBA candidate by a tremendous amount
+    any MVP winner
+-   Voters may have corrected for failing to give MVP awards to Jordan
+    and Shaq in 1997 and 1999, respectively, by rewarding the players
+    with the MVP in the subsequent year
+
+
+Download a .pdf of this [post](downloads/pdf/nba_mvp_comparisons-part_2.pdf)

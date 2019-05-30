@@ -5,15 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/built_website" beforeDir="false" afterPath="$PROJECT_DIR$/built_website" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/built_website/docs/.&#10;" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/downloads/notebooks/nba_mvp_comparisons-part_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/content/downloads/notebooks/nba_mvp_comparisons-part_1.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/nba_mvp_comparisons-part_2.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/nba_mvp_comparisons-part_2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/archives.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/author/kivan-polimis.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/kivan-polimis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/authors.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/authors.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/category/sports.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/category/sports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/downloads/notebooks/nba_mvp_comparisons-part_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/output/downloads/notebooks/nba_mvp_comparisons-part_1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pages/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/pages/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/drafts/nba-mvp-comparisons-part-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/drafts/nba-mvp-comparisons-part-2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pelican-plugins/latex" beforeDir="false" afterPath="$PROJECT_DIR$/pelican-plugins/latex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pelican-plugins/liquid_tags/test_data/pelicanhtml_2.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/pelican-plugins/liquid_tags/test_data/pelicanhtml_2.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pelican-plugins/liquid_tags/test_data/pelicanhtml_3.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/pelican-plugins/liquid_tags/test_data/pelicanhtml_3.tpl" afterDir="false" />
@@ -55,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/content/nba_mvp_comparisons-part_2.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="85">
+              <first_editor relative-caret-position="34">
                 <caret line="5" selection-start-line="5" selection-end-line="5" />
               </first_editor>
               <second_editor />
@@ -252,7 +245,7 @@
     <entry file="file://$PROJECT_DIR$/content/nba_mvp_comparisons-part_2.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
+          <first_editor relative-caret-position="34">
             <caret line="5" selection-start-line="5" selection-end-line="5" />
           </first_editor>
           <second_editor />

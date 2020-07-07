@@ -26,11 +26,11 @@ GOOGLE_ANALYTICS = 'UA-104881568-1'
 
 # Theme and plugins
 # JINJA_FILTERS = {'sidebar': filters.sidebar}
-THEME = "pelican-themes/notmyidea-cms"
+THEME = "pelican-themes/nest"
 
 # Minified CSS
-NEST_CSS_MINIFY = True
-
+# NEST_CSS_MINIFY = True
+#
 NEST_HEADER_IMAGES = ''
 NEST_HEADER_LOGO = '/images/jade_mountain.png'
 
@@ -50,7 +50,7 @@ NEST_CATEGORIES_HEADER_SUBTITLE = u'Articles listed by category'
 NEST_SOFTWARE_HEAD_TITLE = u'Software'
 NEST_SOFTWARE_HEAD_DESCRIPTION = u'Software'
 NEST_SOFTWARE_HEADER_TITLE = u'Software'
-# NEST_SOFTWARE_HEADER_SUBTITLE = u'Articles listed by category'
+NEST_SOFTWARE_HEADER_SUBTITLE = u'Articles listed by category'
 
 # Footer
 NEST_SITEMAP_COLUMN_TITLE = u'Sitemap'
@@ -61,7 +61,8 @@ NEST_SITEMAP_ATOM_LINK = u'Atom Feed'
 NEST_SITEMAP_RSS_LINK = u'RSS Feed'
 NEST_SOCIAL_COLUMN_TITLE = u'Social'
 NEST_LINKS_COLUMN_TITLE = u'Links'
-NEST_COPYRIGHT = u'&copy; Kivan Polimis 2019'
+NEST_COPYRIGHT = u'&copy; Kivan Polimis 2020'
+
 # Footer optional
 NEST_FOOTER_HTML = ''
 

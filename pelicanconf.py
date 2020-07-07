@@ -26,7 +26,7 @@ GOOGLE_ANALYTICS = 'UA-104881568-1'
 
 # Theme and plugins
 # JINJA_FILTERS = {'sidebar': filters.sidebar}
-THEME = "pelican-themes/nest"
+THEME = "pelican-themes/notmyidea-cms"
 
 # Minified CSS
 NEST_CSS_MINIFY = True

@@ -30,7 +30,9 @@ THEME = "pelican-themes/nest"
 
 # Minified CSS
 NEST_CSS_MINIFY = True
-#
+# Add canonical link element to top page header and all article/author/category/tag page header
+NEST_REL_CANONICAL_LINK = True
+
 NEST_HEADER_IMAGES = ''
 NEST_HEADER_LOGO = '/images/jade_mountain.png'
 
@@ -62,6 +64,10 @@ NEST_SITEMAP_RSS_LINK = u'RSS Feed'
 NEST_SOCIAL_COLUMN_TITLE = u'Social'
 NEST_LINKS_COLUMN_TITLE = u'Links'
 NEST_COPYRIGHT = u'&copy; Kivan Polimis 2020'
+
+# pagination.html
+NEST_PAGINATION_PREVIOUS = u'Previous'
+NEST_PAGINATION_NEXT = u'Next'
 
 # Footer optional
 NEST_FOOTER_HTML = ''

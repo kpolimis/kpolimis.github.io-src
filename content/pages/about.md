@@ -5,9 +5,10 @@ save_as: index.html
 ---
 Welcome to my website.
 
-My name is Kivan and I am excited that you are visiting my site.
-Currently, I live in Houston, Texas where I am a data scientist at Atlas Analytics. I am also a regional affiliate at the University of Washington's Center for the Study of Demography and Ecology <a href = "https://csde.washington.edu/">(CSDE)</a> and a research affiliate at the Bocconi Institute for Data Science and Analytics <a href = "http://www.bidsa.unibocconi.eu/wps/wcm/connect/Site/Bidsa/Home">(BIDSA)</a>
-Most recently, I was a data scientist with <a href="https://maana.io">MAANA</a> after completing postdoctoral fellowship at Università Bocconi's <a href="http://www.dondena.unibocconi.it/wps/wcm/connect/Cdr/Centro_Dondena/Home"> Dondena Centre for Research on Social Dynamics and Public Policy</a> in Milan.
+My name is Kivan and I am excited that you are here.
+
+Currently, I live in Houston, Texas where I am a data scientist at Atlas Analytics. I am also a regional affiliate at the University of Washington's Center for the Study of Demography and Ecology <a href = "https://csde.washington.edu/">(CSDE)</a> and a research affiliate at the Bocconi Institute for Data Science and Analytics <a href = "http://www.bidsa.unibocconi.eu/wps/wcm/connect/Site/Bidsa/Home">(BIDSA)</a>.
+Most recently, I was a data scientist with <a href="https://maana.io">MAANA</a> after completing a postdoctoral fellowship at Università Bocconi's <a href="http://www.dondena.unibocconi.it/wps/wcm/connect/Cdr/Centro_Dondena/Home"> Dondena Centre for Research on Social Dynamics and Public Policy</a> in Milan.
 I have also worked with Data Science for Social Good and Microsoft to develop programming solutions in transportation infrastructure and the legal system.
 
 My research focuses on combining computational social science approaches with

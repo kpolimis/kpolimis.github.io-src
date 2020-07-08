@@ -29,7 +29,7 @@ GOOGLE_ANALYTICS = 'UA-104881568-1'
 THEME = "pelican-themes/nest"
 
 # Minified CSS
-# NEST_CSS_MINIFY = True
+NEST_CSS_MINIFY = True
 #
 NEST_HEADER_IMAGES = ''
 NEST_HEADER_LOGO = '/images/jade_mountain.png'

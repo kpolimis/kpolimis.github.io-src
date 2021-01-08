@@ -5,7 +5,7 @@ author: Kivan Polimis
 Category: Tutorials
 ---
 
-# Covid Mortality and Disinformation (Part 1)
+# Covid Mortality and Disinformation - (Part 1)
 Recently, I was scrolling through social media when I saw a post that gave me pause. The social media post is presented below:
 <div>
 <img src="images/social_media_mortality_data_screenshot.png" alt="COVID-19 Mortality Data from Social Media">

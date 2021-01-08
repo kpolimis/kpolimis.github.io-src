@@ -7,9 +7,9 @@ Category: Tutorials
 
 # Covid Mortality and Disinformation (Part 1)
 Recently, I was scrolling through social media when I saw a post that gave me pause. The social media post is presented below:
-
+<div>
 <img src="images/social_media_mortality_data_screenshot.png" alt="COVID-19 Mortality Data from Social Media">
-
+</div>
 The post caught my attention for three reasons: it presented a falsifiable hypothesis, the conclusion was counter-intuitive, and there was an obvious challenge issued. Anyone reading this knows that falsifiable hypotheses are exciting because they deal with evidence and once we agree on the evidence, some hypothesis can be disproven with evidence. Here the falsifiable hypothesis is also the counter-intuitive conclusion, namely that COVID-19 has not affected mortality rates in the United States ("Nothing abnormal [about 2020 mortality rates], corona is like the flu"). What really spurred this blog post to be written was the message being sent in the last sentence of the blog post and the associated references below the table. The implicit challenge was that given data sources, one could also determine that mortality rates had not changed in the U.S. or other countries. As Barney Stinson would say, "Challenge Accepted!"
 
 This blog represents the first in a multi-part series to investigate the COVID-19 mortality claims made on social media. To understand changes in U.S. mortality over time, we need to gather (1): U.S. mortality data and (2): U.S population data. Then, we need to create mortality rates with these data sources. Lastly, we need to compare the mortality rates from the social media post to the mortality data obtained from government sources. In this post we gather the mortality data.

@@ -8,10 +8,10 @@
         <meta name="keywords" content="">
         <link rel="icon" href="./favicon.ico">
         <!-- Canonical -->
-        <link rel="canonical" href="./covid-19-mortality-and-disinformation.html">
+        <link rel="canonical" href="./covid-19-mortality-and-disinformation-part-1.html">
         <!-- /Canonical -->
 
-        <title>COVID-19 Mortality and Disinformation - Kivan Polimis</title>
+        <title>COVID-19 Mortality and Disinformation Part 1 - Kivan Polimis</title>
 
         <!-- Stylesheets -->
         <link href="./theme/css/all.min.css" rel="stylesheet">
@@ -69,7 +69,7 @@
         <div class="row">
               <div class="col-lg-12">
                   <div class="header-content">
-                      <h1 class="header-title">COVID-19 Mortality and Disinformation</h1>
+                      <h1 class="header-title">COVID-19 Mortality and Disinformation Part 1</h1>
                       <p class="header-date"> <a href="./author/kivan-polimis.html">Kivan Polimis</a>, Thu 07 January 2021,  <a href="./category/tutorials.html">Tutorials</a></p>
                       <div class="header-underline"></div>
                       <div class="clearfix"></div>
@@ -93,9 +93,9 @@
 <p>Recently, I was scrolling through social media when I saw a post that gave me pause. The social media post is presented below:
 <div>
 <img src="images/social_media_mortality_data_screenshot.png" alt="COVID-19 Mortality Data from Social Media">
-</div>
-The post caught my attention for three reasons: it presented a falsifiable hypothesis, the conclusion was counter-intuitive, and there was an obvious challenge issued. Anyone reading this knows that falsifiable hypotheses are exciting because they deal with evidence and once we agree on the evidence, some hypothesis can be disproven with evidence. Here the falsifiable hypothesis is also the counter-intuitive conclusion, namely that COVID-19 has not affected mortality rates in the United States ("Nothing abnormal [about 2020 mortality rates], corona is like the flu"). What really spurred this blog post to be written was the message being sent in the last sentence of the blog post and the associated references below the table. The implicit challenge was that given data sources, one could also determine that mortality rates had not changed in the U.S. or other countries. As Barney Stinson would say, "Challenge Accepted!"</p>
-<p>This blog represents the first in a multi-part series to investigate the COVID-19 mortality claims made on social media. To understand changes in U.S. mortality over time, we need to gather (1): U.S. mortality data and (2): U.S population data. Then, we need to create mortality rates with these data sources. Lastly, we need to compare the mortality rates from the social media post to the mortality data obtained from government sources. In this post we gather the mortality data.</p>
+</div></p>
+<p>The post caught my attention for three reasons: it presented a falsifiable hypothesis, the conclusion was counter-intuitive, and there was an obvious challenge issued. Anyone reading this knows that falsifiable hypotheses are exciting because they deal with evidence and once we agree on the evidence, some hypothesis can be disproven with evidence. Here the falsifiable hypothesis is also the counter-intuitive conclusion, namely that COVID-19 has not affected mortality rates in the United States ("Nothing abnormal [about 2020 mortality rates], corona is like the flu"). What really spurred this blog post to be written was the message being sent in the last sentence of the blog post and the associated references below the table. The implicit challenge was that given data sources, one could also determine that mortality rates had not changed in the U.S. or other countries. As Barney Stinson would say, "Challenge Accepted!"</p>
+<p>This blog represents the first in a multi-part series to investigate the COVID-19 mortality claims made on social media. To understand changes in U.S. mortality over time, we need to gather (1): U.S. mortality data and (2): U.S population data. Then, we need to (3) create mortality rates with these data sources. Lastly, we need to (4) compare the mortality rates from the social media post to the mortality data obtained from government sources. In this post we complete step 1, gather U.S. mortality data.</p>
 <p>Government mortality and population data is available via the open data portal <a href="https://www.tylertech.com/products/socrata">Socrata</a>. You can sign up for a Socrata account <a href="https://support.socrata.com/hc/en-us/articles/115004055807-Signing-up-for-an-Account">here</a> and create a developer application to programmatically download Socrata data by following these <a href="https://support.socrata.com/hc/en-us/articles/210138558-Generating-an-App-Token">instructions</a></p>
 <p>Once you have established your Socrata Developer credentials, you can leverage an R package that connects to the Socrata API called <a href="https://cran.r-project.org/web/packages/RSocrata/index.html">RSocrata</a></p>
 <p>First, let's load the libraries we will need for the analysis</p>
@@ -118,8 +118,8 @@ The post caught my attention for three reasons: it presented a falsifiable hypot
 </pre></div>
 
 
-<p>Then we get weekly state mortality data from 2018-2020</p>
-<div class="highlight"><pre><span></span><span class="c1">#&#39; Weekly Counts of Deaths by State and Select Causes, 2014-2018NCHS</span>
+<p>Then we get <a href="https://data.cdc.gov/NCHS/Weekly-Counts-of-Deaths-by-State-and-Select-Causes/3yf8-kanr">weekly state mortality data from 2014-2018</a> from the National Center for Health Statistics (NCHS). The documentation for the NCHS data is available <a href="https://www2.census.gov/programs-surveys/popest/technical-documentation/methodology/2010-2020/methods-statement-v2020-final.pdf">here</a></p>
+<div class="highlight"><pre><span></span><span class="c1">#&#39; Weekly Counts of Deaths by State and Select Causes, 2014-2018 NCHS</span>
 <span class="n">weekly_deaths_by_state_2014_2018</span> <span class="o">&lt;-</span> <span class="nf">read.socrata</span><span class="p">(</span>
   <span class="s">&quot;https://data.cdc.gov/resource/3yf8-kanr.json&quot;</span><span class="p">,</span>
   <span class="n">app_token</span> <span class="o">=</span> <span class="n">socrata_app_credentials</span><span class="o">$</span><span class="n">app_token</span><span class="p">,</span>
@@ -129,9 +129,12 @@ The post caught my attention for three reasons: it presented a falsifiable hypot
 </pre></div>
 
 
-<p>We follow that up with the weekly state mortality data from 2019-2020</p>
-<div class="highlight"><pre><span></span><span class="c1">#&#39; https://data.cdc.gov/NCHS/Weekly-Counts-of-Deaths-by-State-and-Select-Causes/muzy-jte6</span>
-<span class="c1">#&#39; Weekly Counts of Deaths by State and Select Causes, 2019-2020</span>
+<p>We follow that up with the <a href="https://data.cdc.gov/NCHS/Weekly-Counts-of-Deaths-by-State-and-Select-Causes/muzy-jte6">weekly state mortality data from 2019-2020</a> from NCHS. From the [NCHS documentation]((https://www2.census.gov/programs-surveys/popest/technical-documentation/methodology/2010-2020/methods-statement-v2020-final.pdf) we learn that the 2019 and 2020 counts of death are provisional and not yet complete because of a data lag:</p>
+<blockquote>
+<p>In general, the births and deaths data we receive from NCHS have a two-year lag. This means that the most recent data we have on births and deaths by geographic and demographic detail for each vintage of estimates refer to the calendar year two years prior to the vintage year. For example, the most current full-detail births and deaths data we used in Vintage 2020 were from calendar year 2018. We also receive preliminary or provisional NCHS total numbers of births and deaths at the national level for the year prior to the vintage (in this example, 2019). Using these data and the data received from the [The Federal-State Cooperative for Population Estimates (FSCPE)], we create short-term projections that approximate the final NCHS data by characteristics, the preliminary NCHS national totals, and the FSCPE data (where available) by geographic distribution. (pg. 4)</p>
+</blockquote>
+<p>This point is important because in the future counts of death may be revised upward or downward and could change the conclusions drawn in this post.</p>
+<div class="highlight"><pre><span></span><span class="c1">#&#39; Weekly Counts of Deaths by State and Select Causes, 2019-2020 NCHS</span>
 <span class="n">weekly_deaths_by_state_2019_2020</span> <span class="o">&lt;-</span> <span class="nf">read.socrata</span><span class="p">(</span>
   <span class="s">&quot;https://data.cdc.gov/resource/muzy-jte6.json&quot;</span><span class="p">,</span>
   <span class="n">app_token</span> <span class="o">=</span> <span class="n">socrata_app_credentials</span><span class="o">$</span><span class="n">app_token</span><span class="p">,</span>
@@ -141,9 +144,47 @@ The post caught my attention for three reasons: it presented a falsifiable hypot
 </pre></div>
 
 
-<p>Quick glimpse at the data</p>
-<div class="highlight"><pre><span></span><span class="c1">#glimpse(weekly_deaths_by_state_2014_2018)</span>
-<span class="nf">glimpse</span><span class="p">(</span><span class="n">weekly_deaths_by_state_2019_2020</span><span class="p">)</span>
+<p>Quick glimpse at the one of the data sets</p>
+<div class="highlight"><pre><span></span><span class="nf">glimpse</span><span class="p">(</span><span class="n">weekly_deaths_by_state_2019_2020</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="err">## Rows: 5,616</span>
+<span class="err">## Columns: 34</span>
+<span class="err">## $ jurisdiction_of_occurrence              &lt;chr&gt; &quot;Alabama&quot;, &quot;Alabama&quot;, &quot;Alab...</span>
+<span class="err">## $ mmwryear                                &lt;chr&gt; &quot;2019&quot;, &quot;2019&quot;, &quot;2019&quot;, &quot;20...</span>
+<span class="err">## $ mmwrweek                                &lt;chr&gt; &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6...</span>
+<span class="err">## $ week_ending_date                        &lt;chr&gt; &quot;2019-01-05&quot;, &quot;2019-01-12&quot;,...</span>
+<span class="err">## $ all_cause                               &lt;chr&gt; &quot;1077&quot;, &quot;1090&quot;, &quot;1114&quot;, &quot;10...</span>
+<span class="err">## $ natural_cause                           &lt;chr&gt; &quot;993&quot;, &quot;994&quot;, &quot;1042&quot;, &quot;994&quot;...</span>
+<span class="err">## $ septicemia_a40_a41                      &lt;chr&gt; &quot;30&quot;, &quot;25&quot;, &quot;22&quot;, &quot;21&quot;, &quot;18...</span>
+<span class="err">## $ malignant_neoplasms_c00_c97             &lt;chr&gt; &quot;198&quot;, &quot;187&quot;, &quot;238&quot;, &quot;165&quot;,...</span>
+<span class="err">## $ diabetes_mellitus_e10_e14               &lt;chr&gt; &quot;22&quot;, &quot;24&quot;, &quot;18&quot;, &quot;22&quot;, &quot;19...</span>
+<span class="err">## $ alzheimer_disease_g30                   &lt;chr&gt; &quot;60&quot;, &quot;49&quot;, &quot;48&quot;, &quot;50&quot;, &quot;52...</span>
+<span class="err">## $ influenza_and_pneumonia_j09_j18         &lt;chr&gt; &quot;21&quot;, &quot;18&quot;, &quot;31&quot;, &quot;22&quot;, &quot;19...</span>
+<span class="err">## $ chronic_lower_respiratory               &lt;chr&gt; &quot;63&quot;, &quot;85&quot;, &quot;80&quot;, &quot;113&quot;, &quot;8...</span>
+<span class="err">## $ other_diseases_of_respiratory           &lt;chr&gt; &quot;14&quot;, &quot;21&quot;, &quot;30&quot;, &quot;14&quot;, &quot;20...</span>
+<span class="err">## $ nephritis_nephrotic_syndrome            &lt;chr&gt; &quot;21&quot;, &quot;13&quot;, &quot;25&quot;, &quot;25&quot;, &quot;24...</span>
+<span class="err">## $ symptoms_signs_and_abnormal             &lt;chr&gt; &quot;27&quot;, &quot;11&quot;, &quot;15&quot;, &quot;23&quot;, &quot;21...</span>
+<span class="err">## $ diseases_of_heart_i00_i09               &lt;chr&gt; &quot;261&quot;, &quot;275&quot;, &quot;283&quot;, &quot;279&quot;,...</span>
+<span class="err">## $ cerebrovascular_diseases                &lt;chr&gt; &quot;53&quot;, &quot;65&quot;, &quot;53&quot;, &quot;56&quot;, &quot;50...</span>
+<span class="err">## $ covid_19_u071_multiple_cause_of_death   &lt;chr&gt; &quot;0&quot;, &quot;0&quot;, &quot;0&quot;, &quot;0&quot;, &quot;0&quot;, &quot;0...</span>
+<span class="err">## $ covid_19_u071_underlying_cause_of_death &lt;chr&gt; &quot;0&quot;, &quot;0&quot;, &quot;0&quot;, &quot;0&quot;, &quot;0&quot;, &quot;0...</span>
+<span class="err">## $ flag_otherresp                          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_otherunk                           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_nephr                              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_inflpn                             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_cov19mcod                          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_cov19ucod                          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_sept                               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_diab                               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_alz                                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_clrd                               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_stroke                             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_hd                                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_neopl                              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_natcause                           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
+<span class="err">## $ flag_allcause                           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA,...</span>
 </pre></div>
 
 
@@ -160,18 +201,18 @@ The post caught my attention for three reasons: it presented a falsifiable hypot
 </pre></div>
 
 
-<p>This data contains mortality data for more than just U.S. states (specifically, national data, Puerto Rico data and data from New York city). We want to filter to only data in the 50 states and the District of Columbia. Create a variable leveraging the <code>R</code> built-in <code>state.name</code> to create a list of all state names and the District of Columbia and filter weekly mortality data with this list</p>
+<p>The <code>weekly_deaths_2014_2020</code> dataset contains mortality data for more than just U.S. states (specifically, national data, Puerto Rico data and data from New York city). We want to filter to only data in the 50 states and the District of Columbia. Create a variable leveraging the <code>R</code> built-in <code>state.name</code> to create a list of all state names and the District of Columbia and filter weekly mortality data with this list</p>
 <div class="highlight"><pre><span></span><span class="n">state.name_dc</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="n">state.name</span><span class="p">,</span> <span class="s">&quot;District of Columbia&quot;</span><span class="p">)</span>
 <span class="n">state.abb_dc</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="n">state.abb</span><span class="p">,</span> <span class="s">&quot;DC&quot;</span><span class="p">)</span>
 </pre></div>
 
 
-<p>Create two filtered data sets. One with only weekly State (and District of Columbia) data and another data set with only weekly mortality data</p>
+<p>Create two filtered data sets. One with only weekly state (and District of Columbia) data and another data set with only weekly national mortality data</p>
 <div class="highlight"><pre><span></span><span class="n">weekly_deaths_by_state_2014_2020</span> <span class="o">=</span> <span class="n">weekly_deaths_2014_2020</span> <span class="o">%&gt;%</span>
-  <span class="nf">filter</span><span class="p">(</span><span class="n">state_name</span>  <span class="o">%in%</span> <span class="n">state.name_dc</span><span class="p">)</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">state_name</span> <span class="o">%in%</span> <span class="n">state.name_dc</span><span class="p">)</span>
 
 <span class="n">weekly_deaths_by_national_2014_2020</span> <span class="o">=</span> <span class="n">weekly_deaths_2014_2020</span> <span class="o">%&gt;%</span>
-  <span class="nf">filter</span><span class="p">(</span><span class="n">state_name</span><span class="o">==</span> <span class="s">&quot;United States&quot;</span><span class="p">)</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">state_name</span> <span class="o">==</span> <span class="s">&quot;United States&quot;</span><span class="p">)</span>
 </pre></div>
 
 
@@ -190,6 +231,35 @@ The post caught my attention for three reasons: it presented a falsifiable hypot
   <span class="nf">select</span><span class="p">(</span><span class="n">state_name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">all_cause_deaths</span><span class="p">,</span> <span class="n">natural_cause_deaths</span><span class="p">)</span> <span class="o">%&gt;%</span>
   <span class="nf">distinct</span><span class="p">()</span>
 </pre></div>
+
+
+<p>View of <code>yearly_deaths_by_state_2014_2020</code></p>
+<div class="highlight"><pre><span></span><span class="err">## # A tibble: 6 x 4</span>
+<span class="err">##   state_name  year all_cause_deaths natural_cause_deaths</span>
+<span class="err">##   &lt;chr&gt;      &lt;dbl&gt;            &lt;dbl&gt;                &lt;dbl&gt;</span>
+<span class="err">## 1 Alabama     2014            47019                43498</span>
+<span class="err">## 2 Alabama     2015            49054                45257</span>
+<span class="err">## 3 Alabama     2016            51137                47012</span>
+<span class="err">## 4 Alabama     2017            52140                47897</span>
+<span class="err">## 5 Alabama     2018            53158                49061</span>
+<span class="err">## 6 Alabama     2019            53055                48842</span>
+</pre></div>
+
+
+<p>View of <code>yearly_deaths_by_national_2014_2020</code></p>
+<div class="highlight"><pre><span></span><span class="err">## # A tibble: 6 x 4</span>
+<span class="err">##   state_name     year all_cause_deaths natural_cause_deaths</span>
+<span class="err">##   &lt;chr&gt;         &lt;dbl&gt;            &lt;dbl&gt;                &lt;dbl&gt;</span>
+<span class="err">## 1 United States  2014          2646843              2441884</span>
+<span class="err">## 2 United States  2015          2698943              2481524</span>
+<span class="err">## 3 United States  2016          2731848              2496252</span>
+<span class="err">## 4 United States  2017          2810935              2561934</span>
+<span class="err">## 5 United States  2018          2839076              2592261</span>
+<span class="err">## 6 United States  2019          2852609              2599798</span>
+</pre></div>
+
+
+<p>In the next blog post, we will gather the population U.S. population data necessary to create mortality statistics.</p>
 
 
         

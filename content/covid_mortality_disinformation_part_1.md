@@ -7,18 +7,20 @@ Category: Tutorials
 
 # Covid Mortality and Disinformation - (Part 1)
 Recently, I was scrolling through social media when I saw a post that gave me pause. The social media post is presented below:
+
 <div>
 <img src="images/social_media_mortality_data_screenshot.png" alt="COVID-19 Mortality Data from Social Media">
 </div>
+
 The post caught my attention for three reasons: it presented a falsifiable hypothesis, the conclusion was counter-intuitive, and there was an obvious challenge issued. Anyone reading this knows that falsifiable hypotheses are exciting because they deal with evidence and once we agree on the evidence, some hypotheses can be disproven with evidence. Here the falsifiable hypothesis is also the counter-intuitive conclusion, namely that COVID-19 has not affected mortality rates in the United States ("Nothing abnormal [about 2020 mortality rates], corona is like the flu"). What really spurred this blog post to be written was the message being sent in the last sentence of the blog post and the associated references below the table. The implicit challenge was that given data sources, one could also determine that mortality rates had not changed in the U.S. or other countries. As Barney Stinson would say, "Challenge Accepted!"
 
 The comparative concept at play in the mortality claims from social media is: "How bad is this year's mortality rate compared to previous mortality rates?". We can operationalize this concept as mortality rate change and create it by comparing the morality rate for each year (y) to the mortality rate in the previous year (y-1):
 
 $$\text{Mortality Rate Change}_{y}= \frac{\text{Mortality Rate}_{y}-\text{Mortality Rate}_{y-1}}{\text{Mortality Rate}_{y-1}}$$
 
-After creating the morality rates for 2014 to 2020, I concluded that the mortality rate change for 2020 is 12 times greater than the average mortality rate change from 2014 to 2019. In short, the falsifiable hypothesis that was presented in the social media post (2020 mortality rates are normal), was falsified, mortality rates in 2020 are far from the average.
+After creating the morality rates for 2014 to 2020, I concluded that the mortality rate change for 2020 is 12 times greater than the average mortality rate change from 2014 to 2019. In short, the falsifiable hypothesis that was presented in the social media post (2020 mortality rates are normal), was falsified; the mortality rate change in 2020 was far from the average.
 
-To lead others interesting in getting the data themselves and drawing their own conclusions, I created a multi-part blog series. This blog post represents the first in an attempt to investigate the COVID-19 mortality claims made on social media. To understand changes in U.S. mortality over time, we need to gather (1): U.S. mortality data and (2): U.S population data. Then, we need to (3) create mortality rates with these data sources. Lastly, we need to (4) compare the mortality rates from the social media post to the mortality data obtained from government sources. In this post we complete step 1, gather U.S. mortality data.
+To lead others interesting in getting the data themselves and drawing their own conclusions, I created a multi-part blog series. All code to recreate these analyses will be available on [my Github account](https://github.com/kpolimis/). This blog post represents the first in an attempt to investigate the COVID-19 mortality claims made on social media. To understand changes in U.S. mortality over time, we need to gather (1): U.S. mortality data and (2): U.S population data. Then, we need to (3) create mortality rates with these data sources. Lastly, we need to (4) compare the mortality rates from the social media post to the mortality data obtained from government sources. In this post we complete step 1, gather U.S. mortality data.
 
 Government mortality and population data is available via the open data portal [Socrata](https://www.tylertech.com/products/socrata). You can sign up for a Socrata account [here](https://support.socrata.com/hc/en-us/articles/115004055807-Signing-up-for-an-Account) and create a developer application to programmatically download Socrata data by following these [instructions](https://support.socrata.com/hc/en-us/articles/210138558-Generating-an-App-Token)
 
@@ -45,10 +47,22 @@ email: "EMAIL"
 password: "PASSWORD"
 ```
 
-Then we get [weekly state mortality data from 2014-2018](https://data.cdc.gov/NCHS/Weekly-Counts-of-Deaths-by-State-and-Select-Causes/3yf8-kanr) from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS). The NCHS is a part of the Centers for Disease Control and Prevention (CDC) and provides statistical information for public health policies. The documentation for the NCHS data is available [here](https://www2.census.gov/programs-surveys/popest/technical-documentation/methodology/2010-2020/methods-statement-v2020-final.pdf)
+
+Yearly mortality from 1999 to 2020 does not exist in one dataset, so we will need to combine 3 government datasets to create our own data to answer the challenge presented in the social media post. The first government dataset is [yearly mortality data from 1999 to 2017](https://data.cdc.gov/NCHS/NCHS-Leading-Causes-of-Death-United-States/bi63-dtpu) from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS). The NCHS is a part of the Centers for Disease Control and Prevention (CDC) and provides statistical information for public health policies. The documentation for the NCHS data is available [here](https://www2.census.gov/programs-surveys/popest/technical-documentation/methodology/2010-2020/methods-statement-v2020-final.pdf)
 
 ``` {.r}
-#' Weekly Counts of Deaths by State and Select Causes, 2014-2018 NCHS
+#' Yearly Counts of Deaths by State and Select Causes, 1999-2017
+yearly_deaths_by_state_1999_2017 <- read.socrata(
+  "https://data.cdc.gov/resource/bi63-dtpu.json",
+  app_token = socrata_app_credentials$app_token,
+  email = socrata_app_credentials$email,
+  password  = socrata_app_credentials$password
+)
+```
+
+Then we get [weekly state mortality data from 2014-2018](https://data.cdc.gov/NCHS/Weekly-Counts-of-Deaths-by-State-and-Select-Causes/3yf8-kanr)
+``` {.r}
+#' Weekly Counts of Deaths by State and Select Causes, 2014-2018
 weekly_deaths_by_state_2014_2018 <- read.socrata(
   "https://data.cdc.gov/resource/3yf8-kanr.json",
   app_token = socrata_app_credentials$app_token,
@@ -64,7 +78,7 @@ We follow that up with the [weekly state mortality data from 2019-2020](https://
 This point is important because in the future counts of death may be revised upward or downward and could change the conclusions drawn in this post.
 
 ``` {.r}
-#' Weekly Counts of Deaths by State and Select Causes, 2019-2020 NCHS
+#' Weekly Counts of Deaths by State and Select Causes, 2019-2020
 weekly_deaths_by_state_2019_2020 <- read.socrata(
   "https://data.cdc.gov/resource/muzy-jte6.json",
   app_token = socrata_app_credentials$app_token,
@@ -73,7 +87,7 @@ weekly_deaths_by_state_2019_2020 <- read.socrata(
 )
 ```
 
-Quick glimpse at the one of the data sets
+`glimpse` of the yearly mortality dataset
 ``` {.r}
 glimpse(weekly_deaths_by_state_2019_2020)
 ```
@@ -118,80 +132,68 @@ glimpse(weekly_deaths_by_state_2019_2020)
 ## $ flag_allcause                           <chr> NA, NA, NA, NA, NA, NA, NA,...
 ```
 
-Combine the 2014-2018 data with the 2019-2020 data and perform some pre-processing like renaming and subsetting columns
+NCHS datasets often contain mortality data for more  geographic regions than just U.S. states (e.g., national data, or data from Puerto Rico and New York City). We want to filter to only data in the 50 states, the District of Columbia, and the United States. Create a variable leveraging the `R` built-in `state.name` to create a list of all state names, the District of Columbia, and the United States and filter mortality data with this list
+
+``` {.r}
+state.name_dc_us = c(state.name, "District of Columbia", "United States")
+state.abb_dc_us = c(state.abb, "DC", "US")
+```
+
+Our goal is to create a yearly 1999 to 2020 mortality data by combining the yearly mortality data from 1999 to 2017 with the weekly 2014 to 2018 data and the weekly 2019 to 2020 data. First, we perform some pre-processing by (1) renaming columns, (2) filtering to only the "All causes" and regions captured in `state.name_dc_us` list, and (3) subsetting columns.
+
+``` {.r}
+yearly_deaths_by_state_1999_2017_subset = yearly_deaths_by_state_1999_2017 %>%
+  rename('state_name'='state', 'all_deaths'='deaths') %>%
+  filter(cause_name=="All causes" & state_name %in% state.name_dc_us) %>%
+  select(state_name, year, all_deaths)
+```
+
+Then we combine the weekly 2014-2018 data with the 2019-2020 data with similar pre-processing.
 ``` {.r}
 weekly_deaths_2014_2020 = weekly_deaths_by_state_2014_2018 %>%
-  select(jurisdiction_of_occurrence, mmwryear, allcause, naturalcause, weekendingdate) %>%
-  rename('state_name'='jurisdiction_of_occurrence', 'all_cause'='allcause', 'natural_cause'='naturalcause',
+  select(jurisdiction_of_occurrence, mmwryear, allcause, weekendingdate) %>%
+  rename('state_name'='jurisdiction_of_occurrence', 'all_cause_deaths'='allcause',
          'year'='mmwryear', 'week_ending_date' = 'weekendingdate') %>%
   mutate(week_ending_date = as.character(week_ending_date)) %>%
   rbind(weekly_deaths_by_state_2019_2020 %>%
-          rename('state_name'='jurisdiction_of_occurrence', 'year'='mmwryear') %>%
-          select(state_name, year, all_cause, natural_cause, week_ending_date)) %>%
+          rename('state_name'='jurisdiction_of_occurrence', 'year'='mmwryear', 'all_cause_deaths'='all_cause') %>%
+          select(state_name, year, all_cause_deaths, week_ending_date)) %>%
+  filter(state_name %in% state.name_dc_us) %>%
   arrange(state_name, year)
-
 ```
 
-The `weekly_deaths_2014_2020` dataset contains mortality data for more than just U.S. states (specifically, national data, Puerto Rico data and data from New York city). We want to filter to only data in the 50 states and the District of Columbia. Create a variable leveraging the `R` built-in `state.name` to create a list of all state names and the District of Columbia and filter weekly mortality data with this list
-
+Create yearly mortality data for states and U.S. from 2018 to 2020
 ``` {.r}
-state.name_dc = c(state.name, "District of Columbia")
-state.abb_dc = c(state.abb, "DC")
-```
-
-Create two filtered data sets. One with only weekly state (and District of Columbia) data and another data set with only weekly national mortality data
-
-``` {.r}
-weekly_deaths_by_state_2014_2020 = weekly_deaths_2014_2020 %>%
-  filter(state_name %in% state.name_dc)
-
-weekly_deaths_by_national_2014_2020 = weekly_deaths_2014_2020 %>%
-  filter(state_name == "United States")
-```
-
-Create yearly mortality data for states and national data set
-``` {.r}
-yearly_deaths_by_state_2014_2020 = weekly_deaths_by_state_2014_2020 %>%
+yearly_deaths_by_state_2018_2020 = weekly_deaths_2014_2020 %>%
+  filter(year>=2018) %>%
   group_by(state_name, year) %>%
-  mutate(all_cause_deaths = sum(as.numeric(all_cause), na.rm = TRUE),
-         natural_cause_deaths = sum(as.numeric(natural_cause), na.rm = TRUE)) %>%
-  select(state_name, year, all_cause_deaths, natural_cause_deaths) %>%
-  distinct()
-
-yearly_deaths_by_national_2014_2020 = weekly_deaths_by_national_2014_2020 %>%
-  group_by(state_name, year) %>%
-  mutate(all_cause_deaths = sum(as.numeric(all_cause), na.rm = TRUE),
-         natural_cause_deaths = sum(as.numeric(natural_cause), na.rm = TRUE)) %>%
-  select(state_name, year, all_cause_deaths, natural_cause_deaths) %>%
-  distinct()
+  mutate(all_deaths = sum(as.numeric(all_cause_deaths), na.rm = TRUE)) %>%
+  select(state_name, year, all_deaths) %>%
+  distinct() %>%
+  ungroup()
 ```
 
-View of `yearly_deaths_by_state_2014_2020`
+Now we can produce a yearly mortality dataset for states and U.S. from 1999 to 2020 by combining our two yearly datasets from 1999 to 2017 and 2018 to 2020
+
+``` {.r}
+yearly_deaths_by_state_1999_2020 = rbind(yearly_deaths_by_state_1999_2017_subset,
+                                         yearly_deaths_by_state_2018_2020) %>%
+  arrange(year)
 
 ```
-## # A tibble: 6 x 4
-##   state_name  year all_cause_deaths natural_cause_deaths
-##   <chr>      <dbl>            <dbl>                <dbl>
-## 1 Alabama     2014            47019                43498
-## 2 Alabama     2015            49054                45257
-## 3 Alabama     2016            51137                47012
-## 4 Alabama     2017            52140                47897
-## 5 Alabama     2018            53158                49061
-## 6 Alabama     2019            53055                48842
-```
 
-View of `yearly_deaths_by_national_2014_2020`
+View of `yearly_deaths_by_state_1999_2020`
 
 ```
-## # A tibble: 6 x 4
-##   state_name     year all_cause_deaths natural_cause_deaths
-##   <chr>         <dbl>            <dbl>                <dbl>
-## 1 United States  2014          2646843              2441884
-## 2 United States  2015          2698943              2481524
-## 3 United States  2016          2731848              2496252
-## 4 United States  2017          2810935              2561934
-## 5 United States  2018          2839076              2592261
-## 6 United States  2019          2852609              2599798
+## # A tibble: 6 x 3
+##   state_name  year all_deaths
+##   <chr>      <dbl>      <dbl>
+## 1 Alabama     1999      44806
+## 2 Alaska      1999       2708
+## 3 Arizona     1999      40050
+## 4 Arkansas    1999      27925
+## 5 California  1999     229380
+## 6 Colorado    1999      27114
 ```
 
 In the next blog post, we will gather the population U.S. population data necessary to create mortality statistics.

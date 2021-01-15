@@ -14,11 +14,11 @@ Recently, I was scrolling through social media when I saw a post that gave me pa
 
 The post caught my attention for three reasons: (1) it presented a falsifiable hypothesis, (2) the conclusion was counter-intuitive, and (3) there was an obvious challenge issued. Anyone reading this knows that falsifiable hypotheses are exciting because they deal with evidence and once we agree on the evidence, some hypotheses can be disproven with evidence. Here the falsifiable hypothesis is also the counter-intuitive conclusion, namely that COVID-19 has not affected mortality rates in the United States ("Nothing abnormal [about 2020 mortality rates], corona is like the flu"). What really spurred this blog post to be written was the message being sent in the last sentence of the blog post and the associated references below the table. The implicit challenge was that given data sources, one could also determine that mortality rates had not changed in the U.S. or other countries. As Barney Stinson would say, "Challenge Accepted!"
 
-The comparative concept at play in the mortality claims from social media is: "How bad is this year's mortality rate compared to previous mortality rates?". We can operationalize this concept as mortality rate change and create it by comparing the morality rate for each year (y) to the mortality rate in the previous year (y-1):
+The comparative concept at play in the mortality claims from social media is: "How bad is this year's mortality rate compared to previous mortality rates?". We can operationalize this concept as a rate of change and create it by comparing the morality rate for each year (y) to the mortality rate in the previous year (y-1):
 
-$$\text{Mortality Rate Change}_{y}= \frac{\text{Mortality Rate}_{y}-\text{Mortality Rate}_{y-1}}{\text{Mortality Rate}_{y-1}}$$
+$$\text{Rate of Change}_{y}= \frac{\text{Mortality Rate}_{y}-\text{Mortality Rate}_{y-1}}{\text{Mortality Rate}_{y-1}}$$
 
-After creating the morality rates for 2014 to 2020, I concluded that the mortality rate change for 2020 is 12 times greater than the average mortality rate change from 2014 to 2019. In short, the falsifiable hypothesis that was presented in the social media post (2020 mortality rates are normal), was falsified; the mortality rate change in 2020 was far from the average.
+After creating the rates of change for each year from 1999 to 2020, I concluded that the rate of change for 2020's mortality rate is 100 times greater than the average rate of change from 1999 to 2019. In short, the falsifiable hypothesis that was presented in the social media post (2020 mortality rates are normal), was falsified; the mortality rate change in 2020 was far from the average.
 
 To lead others interested in getting the data themselves and drawing their own conclusions, I created a multi-part blog series. All code to recreate these analyses will eventually be available on [my Github account](https://github.com/kpolimis/). This blog post represents the first in an attempt to investigate the COVID-19 mortality claims made on social media. To understand changes in U.S. mortality over time, we need to gather (1): U.S. mortality data and (2): U.S population data. Then, we need to (3) create mortality rates with these data sources. Lastly, we need to (4) compare the mortality rates from the social media post to the mortality data obtained from government sources. In this post we complete step 1, gather U.S. mortality data.
 
@@ -138,7 +138,7 @@ state.name_dc_us = c(state.name, "District of Columbia", "United States")
 state.abb_dc_us = c(state.abb, "DC", "US")
 ```
 
-Our goal is to create a yearly 1999 to 2020 mortality data by combining the yearly mortality data from 1999 to 2017 with the weekly 2014 to 2018 data and the weekly 2019 to 2020 data. First, we perform some pre-processing by (1) renaming columns, (2) filtering to only the "All causes" and regions captured in `state.name_dc_us` list, and (3) subsetting columns.
+Our goal is to create a yearly 1999 to 2020 mortality data by combining the yearly mortality data from 1999 to 2017 with the weekly 2014 to 2018 data and the weekly 2019 to 2020 data. First, we perform some pre-processing by (1) renaming columns, (2) filtering to include only the "All causes" deaths data and regions captured in `state.name_dc_us` list, and (3) subsetting columns.
 
 ``` {.r}
 yearly_deaths_by_state_1999_2017_subset = yearly_deaths_by_state_1999_2017 %>%
@@ -161,7 +161,7 @@ weekly_deaths_2014_2020 = weekly_deaths_by_state_2014_2018 %>%
   arrange(state_name, year)
 ```
 
-Create yearly mortality data for states and U.S. from 2018 to 2020
+Aggregate weekly mortality data by year and create yearly mortality data for states and U.S. from 2018 to 2020
 ``` {.r}
 yearly_deaths_by_state_2018_2020 = weekly_deaths_2014_2020 %>%
   filter(year>=2018) %>%
@@ -195,4 +195,4 @@ View of `yearly_deaths_by_state_1999_2020`
 ## 6 Colorado    1999      27114
 ```
 
-In the next blog post, we will gather the population U.S. population data necessary to create mortality statistics.
+In the next blog post, we will gather the population U.S. population data necessary to create mortality rate statistics.

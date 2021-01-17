@@ -17,7 +17,7 @@ library(lubridate)
 library(tidyverse)
 ```
 
-Our mortality data is stores in the .csv `mortality_time_series_national.csv`. I manually coded the table reported in the social media blog post in the .csv `social_media_mortality_data.csv`.
+Our mortality data is in the .csv `mortality_time_series_national.csv`. I manually coded the table reported in the social media blog post in the .csv `social_media_mortality_data.csv`.
 ``` {.r}
 mortality_time_series_national = read_csv(here("output/mortality_time_series_national.csv"))
 social_media_mortality_data = read_csv(here("data/social_media_mortality_data.csv"))

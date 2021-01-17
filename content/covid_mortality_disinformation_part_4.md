@@ -91,7 +91,7 @@ Here's a plot of mortality rate's rate of change by data source. Similar to the 
 We can create another facet plot to better separate trends
 
 <div>
-<img src="images/us_mortality_rate_roc_ facet_plot.png" alt="US Mortality Rate per 100,000 from 1999 to 2020 (Dual Plots)">
+<img src="images/us_mortality_rate_roc_facet_plot.png" alt="US Mortality Rate per 100,000 from 1999 to 2020 (Dual Plots)">
 </div>
 
 We will compare the social media mortality data and the mortality data we created by cohort and period. [Period and cohort analysis](https://www.publichealth.columbia.edu/research/population-health-methods/age-period-cohort-analysis) is a method common to epidemiology; while we are not using the terms in their exact public health sense, these terms can be helpful for separating time-varying elements. The period comparison will compare the mortality rate of change from 1999 to 2019 with the mortality rate of change from 2020, recalling the central point of contention from our poster that 2020 mortality is inline with the time period 1999 to 2019. Secondly, we will split the time period 1999 to 2020 into 5-year cohorts for a more granular analysis of the trends within proximate years.

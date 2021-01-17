@@ -155,7 +155,8 @@ weekly_deaths_2014_2020 = weekly_deaths_by_state_2014_2018 %>%
          'year'='mmwryear', 'week_ending_date' = 'weekendingdate') %>%
   mutate(week_ending_date = as.character(week_ending_date)) %>%
   rbind(weekly_deaths_by_state_2019_2020 %>%
-          rename('state_name'='jurisdiction_of_occurrence', 'year'='mmwryear', 'all_cause_deaths'='all_cause') %>%
+          rename('state_name'='jurisdiction_of_occurrence',
+                 'year'='mmwryear', 'all_cause_deaths'='all_cause') %>%
           select(state_name, year, all_cause_deaths, week_ending_date)) %>%
   filter(state_name %in% state.name_dc_us) %>%
   arrange(state_name, year)

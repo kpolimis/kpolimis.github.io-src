@@ -17,7 +17,7 @@ library(here)
 library(tidyverse)
 ```
 
-Use the `readr` package (part of the [Tidyverse](https://www.tidyverse.org/)) to go from census urls of .csv data to create data frames of census data
+Use the `readr` package (part of the [Tidyverse](https://www.tidyverse.org/packages/)) to go from census urls of .csv data to create data frames of census data
 
 * census urls
 ``` {.r}

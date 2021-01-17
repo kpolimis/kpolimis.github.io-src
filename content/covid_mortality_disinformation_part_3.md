@@ -18,13 +18,10 @@ library(data.table)
 ```
 
 * read in Census population data
+* read in NCHS mortality data
+
 ``` {.r}
 national_population_1999_2020 =  read_csv(here("data/national_population_1999_2020.csv"))
-```
-
-* read in NCHS population data
-
-``` {.r}
 yearly_deaths_by_state_1999_2020 = read_csv(here("data/yearly_deaths_by_state_1999_2020.csv"))
 ```
 
@@ -67,7 +64,7 @@ mortality_time_series_national = rbindlist(list(national_population_1999_2020_lo
 
 ```
 
-Now that we have dataset with mortality and population data, we can create a wide data set to calculate mortality rates and rates of change metric for mortality rates
+Now that we have a dataset with mortality and population data, we can create a wide data set to calculate mortality rates and a rate of change metric for the mortality rate
 
 * reshape national mortality and population data into a wide mortality/population dataset from 1999 to 2020
 * create mortality rate for each year (y). we will create mortality rates per 100,000 people to compare with the social media post that used the same scale

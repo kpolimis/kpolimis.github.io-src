@@ -75,7 +75,6 @@ Now that we have dataset with mortality and population data, we can create a wid
 
 $$\text{Mortality Rate}_{y}= \frac{\text{All Deaths}_{y}}{\text{Population Estimate}_{y}} * \text{100, 000}$$
 
-
 $$\text{Rate of Change}_{y}= \frac{\text{Mortality Rate}_{y}-\text{Mortality Rate}_{y-1}}{\text{Mortality Rate}_{y-1}}$$
 
 ``` {.r}
@@ -86,7 +85,7 @@ us_mortality_data_1999_2020 = reshape2::dcast(mortality_time_series_national, st
          mortality_rate_roc = (mortality_rate - mortality_rate_lag)/mortality_rate_lag)
 ```
 
-Let's recreate the table from the social media post that spurred this blog series
+Let's use the government data to recreate the table from the social media post that spurred this blog series
 
 <!-- html table generated in R 3.6.3 by xtable 1.8-4 package -->
 <!-- Fri Jan 15 16:55:38 2021 -->
@@ -116,4 +115,5 @@ Let's recreate the table from the social media post that spurred this blog serie
   <tr> <td> 2019 </td> <td> 328,329,953 </td> <td> 2,852,609 </td> <td> 869 </td> </tr>
   <tr> <td> 2020 </td> <td> 329,484,123 </td> <td> 3,258,883 </td> <td> 989 </td> </tr>
 </table>
+
 We now have all the data we need to compare the mortality rates obtained from government data with the mortality rates shown in the social media post. Continue to [Part 4](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-4.html) to view the results of this comparison.

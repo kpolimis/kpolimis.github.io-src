@@ -35,7 +35,7 @@ national_pop_2000_2010 = read_csv(national_pop_2000_2010_url)
 national_pop_2010_2020 = read_csv(national_2010_2020_pop_url)
 ```
 
-We know the names of the `national_pop_1999` dataframe because we manually added them. What are the column names for other population data?
+We know the column names of the `national_pop_1999` dataframe because we manually added them. What are the column names for other population data?
 ``` {.r}
 names(national_pop_2000_2010)
 names(national_pop_2010_2020)

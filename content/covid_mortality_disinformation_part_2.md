@@ -122,4 +122,4 @@ national_1999_2020_pop_wide = cbind(national_pop_1999_wide,
 ## 1         326838199         328329953         329484123
 ```
 
-In the next post we will combine the mortality and population data to create mortality rates.
+In the [next post](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-3.html) we will combine the mortality and population data to create mortality rates.

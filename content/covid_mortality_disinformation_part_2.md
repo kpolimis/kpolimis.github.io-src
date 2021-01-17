@@ -11,6 +11,7 @@ In the [previous post](http://kivanpolimis.com/covid-19-mortality-and-disinforma
 
 The goal of this post is to pair the mortality data with population data from the same time period to create mortality rates. [Mortality rates](https://en.wikipedia.org/wiki/Mortality_rate) (also known as death rates) are a scaled metric that capture the amount of deaths in a population. Typically that scaled population expresses the deaths per 1,000 or 100,000 people in the population (e.g., the mortality rate in US in 2000 was 854 deaths per 100,000). We will combine 3 Census data sets to get U.S. population estimates from 1999 to 2020.
 
+* load libraries
 ``` {.r}
 library(here)
 library(tidyverse)

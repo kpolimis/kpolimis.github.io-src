@@ -7,9 +7,9 @@ Category: Tutorials
 
 # Covid Mortality and Disinformation - (Part 4)
 
-As part of our investigation into mortality rates reported on social media and mortality data created by combining government data sources, we've now completed 3 steps. First, we [downloaded mortality data](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-1.html) from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS) from 1999 to 2020. Then we [downloaded population data](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-2.html) from the Census from 1999 to 2020. Using the mortality and population data, we [created mortality rates](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-3.html). Now that we have mortality rates, we can compare the mortality data we have with the mortality data reported on social media that started this blog series.
+As part of our investigation into mortality rates reported on social media and mortality data created by combining government data sources, we've now completed 3 steps. First, we [downloaded mortality data](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-1.html) from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS). Then we [downloaded population data](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-2.html) from the Census. Using the mortality and population data, we [created mortality rates](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-3.html) from 1999 to 2020. Now that we have mortality rates, we can compare the mortality data we have with the mortality data reported on social media that started this blog series.
 
-load libraries
+* load libraries
 ``` {.r}
 library(here)
 library(reshape2)
@@ -23,7 +23,7 @@ mortality_time_series_national = read_csv(here("output/mortality_time_series_nat
 social_media_mortality_data = read_csv(here("data/social_media_mortality_data.csv"))
 ```
 
-Let's add a column `source` to each dataset so that we can tell the data sources apart when we create a comparison data set
+Let's add a column, `source`, to each dataset so that we can tell the data sources apart when we create a comparison data set
 ``` {.r}
 mortality_time_series_national$source = "CDC & Census"
 social_media_mortality_data$source = "Social Media"

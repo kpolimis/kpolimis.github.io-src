@@ -7,9 +7,9 @@ Category: Tutorials
 
 # Covid Mortality and Disinformation - (Part 3)
 
-In the previous two posts we [downloaded mortality data](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-1.html) from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS) and [downloaded population data](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-2.html) from the Census from 1999 to 2020
+In the previous two posts we [downloaded mortality data](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-1.html) from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS) and [downloaded population data](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-2.html) from the Census. The goal of this post is to create mortality statistics by combining the mortality data with population data.
 
-load libraries
+* load libraries
 ``` {.r}
 library(here)
 library(reshape2)
@@ -33,7 +33,7 @@ names(national_population_1999_2020)
 names(yearly_deaths_by_state_1999_2020)
 ```
 
-* What are the variable names in each dataset?
+* what are the variable names in each dataset?
 
 ```
 ##  [1] "state_name"        "pop_estimate_1999" "pop_estimate_2000"
@@ -51,7 +51,7 @@ names(yearly_deaths_by_state_1999_2020)
 ## [1] "state_name" "year"       "all_deaths"
 ```
 
-* Create a long data set of mortality data
+* reshape mortality and population datasets into long datasets
 ``` {.r}
 yearly_deaths_by_state_1999_2020_long = reshape2::melt(yearly_deaths_by_state_1999_2020, id.vars = c("state_name", "year"))
 national_population_1999_2020_long = reshape2::melt(national_population_1999_2020, id.vars = c("state_name"))

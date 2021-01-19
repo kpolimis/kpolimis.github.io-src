@@ -5,7 +5,7 @@ author: Kivan Polimis
 Category: Tutorials
 ---
 
-# Covid Mortality and Disinformation - (Part 1)
+#Mortality Data and COVID-19 Disinformation - Part 1
 Recently, I was scrolling through social media when I saw a post that gave me pause. The social media post is presented below:
 
 <div>

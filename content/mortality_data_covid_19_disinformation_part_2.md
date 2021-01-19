@@ -5,7 +5,7 @@ author: Kivan Polimis
 Category: Tutorials
 ---
 
-# Covid Mortality and Disinformation - (Part 2)
+# Mortality Data and COVID-19 Disinformation - Part 2
 
 In the [previous post](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-1.html) we used [RSocrata](https://cran.r-project.org/web/packages/RSocrata/index.html) to download mortality data from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS) from 1999 to 2020.
 

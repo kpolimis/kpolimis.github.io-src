@@ -5,7 +5,7 @@ author: Kivan Polimis
 Category: Tutorials
 ---
 
-# Covid Mortality and Disinformation - (Part 4)
+# Mortality Data and COVID-19 Disinformation - Part 4
 
 As part of our investigation into mortality rates reported on social media and mortality data created by combining government data sources, we've now completed 3 steps. First, we [downloaded mortality data](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-1.html) from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS). Then we [downloaded population data](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-2.html) from the [Census](https://www.census.gov/about/what.html). Using the mortality and population data, we [created mortality rates](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-3.html) from 1999 to 2020. Now that we have mortality rates, we can compare the mortality data we have with the mortality data reported on social media that started this blog series.
 

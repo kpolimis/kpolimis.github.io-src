@@ -113,4 +113,4 @@ Let's use the government data to recreate the table from the social media post t
   <tr> <td> 2020 </td> <td> 329,484,123 </td> <td> 3,258,883 </td> <td> 989 </td> </tr>
 </table>
 
-We now have all the data we need to compare the mortality rates obtained from government data with the mortality rates shown in the social media post. Continue to [Part 4](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-4.html) to view the results of this comparison.
+We now have all the data we need to compare the mortality rates obtained from government data with the mortality rates shown in the social media post. Continue to [Part 4](http://kivanpolimis.com/mortality-data-and-covid-19-disinformation-part-4.html) to view the results of this comparison.

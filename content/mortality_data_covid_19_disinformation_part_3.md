@@ -7,7 +7,7 @@ Category: Tutorials
 
 # Mortality Data and COVID-19 Disinformation - Part 3
 
-In the previous two posts, we [downloaded mortality data](hhttp://kivanpolimis.com/mortality-data-and-covid-19-disinformation-part-1.html) from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS) and [downloaded population data](http://kivanpolimis.com/mortality-data-and-covid-19-disinformation-part-2.html) from the [Census](https://www.census.gov/about/what.html). The goal of this post is to create mortality statistics by combining the mortality data with population data.
+In the previous two posts, we [downloaded mortality data](http://kivanpolimis.com/mortality-data-and-covid-19-disinformation-part-1.html) from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS) and [downloaded population data](http://kivanpolimis.com/mortality-data-and-covid-19-disinformation-part-2.html) from the [Census](https://www.census.gov/about/what.html). The goal of this post is to create mortality statistics by combining the mortality data with population data.
 
 * load libraries
 ``` {.r}

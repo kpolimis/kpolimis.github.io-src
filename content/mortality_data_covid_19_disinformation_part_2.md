@@ -7,7 +7,7 @@ Category: Tutorials
 
 # Mortality Data and COVID-19 Disinformation - Part 2
 
-In the [previous post](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-1.html) we used [RSocrata](https://cran.r-project.org/web/packages/RSocrata/index.html) to download mortality data from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS) from 1999 to 2020.
+In the [previous post](http://kivanpolimis.com/mortality-data-and-covid-19-disinformation-part-1.html) we used [RSocrata](https://cran.r-project.org/web/packages/RSocrata/index.html) to download mortality data from the [National Center for Health Statistics](https://www.cdc.gov/nchs/about/50th_anniversary.htm) (NCHS) from 1999 to 2020.
 
 The goal of this post is to pair the mortality data with population data from the same time period to create mortality rates. [Mortality rates](https://en.wikipedia.org/wiki/Mortality_rate) (also known as death rates) are a scaled metric that capture the amount of deaths in a population. Typically that scaled population expresses the deaths per 1,000 or 100,000 people in the population (e.g., the U.S. mortality rate in 2000 was 854 deaths per 100,000 residents). We will combine 3 [Census](https://www.census.gov/about/what.html) datasets to get U.S. population estimates from 1999 to 2020.
 

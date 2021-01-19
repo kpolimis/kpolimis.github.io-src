@@ -196,4 +196,4 @@ View of `yearly_deaths_by_state_1999_2020`
 ## 6 Colorado    1999      27114
 ```
 
-In the [next blog post](http://kivanpolimis.com/covid-19-mortality-and-disinformation-part-2.html), we will gather the population U.S. population data necessary to create mortality rate statistics.
+In the [next blog post](http://kivanpolimis.com/mortality-data-and-covid-19-disinformation-part-2.html), we will gather the population U.S. population data necessary to create mortality rate statistics.

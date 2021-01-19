@@ -1,5 +1,5 @@
 ---
-Title: COVID-19 Mortality and Disinformation - Part 3
+Title: Mortality Data and COVID-19 Disinformation - Part 3
 Date: 2021-01-14 07:11
 author: Kivan Polimis
 Category: Tutorials

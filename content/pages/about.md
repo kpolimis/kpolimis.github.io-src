@@ -21,7 +21,7 @@ I am an alum of:
     </li>
 </ul>
 
-I created this website because I want to demonstrate how data science methods power reproducible software solutions for problem solving ranging from the personal to professional. Personally, a data science skillset has helped me answer questions about passion projects such as public policy or sport. Professionally, data literacy and the ability to implement software solutions have helped me become an impactful data scientist and researcher by automating work.  I hope others are interested in developing similar skills and that my corner of the internet is help in those pursuits.
+I created this website because I want to demonstrate how data science methods power reproducible software solutions for problem solving ranging from the personal to professional. Personally, a data science skillset has helped me answer questions about passion projects such as public policy or sport. Professionally, data literacy and the ability to implement software solutions have helped me become an impactful data scientist and researcher by automating work.  I hope others are interested in developing similar skills and that my corner of the internet is helpful in those pursuits.
 
 Check out the <a href="../categories.html">Articles</a> page for reproducible analyses across a broad range of topics or my <a href="../pages/vita.html">CV/Resume</a> for more information about me.
 

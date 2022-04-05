@@ -27,4 +27,4 @@ Check out the <a href="../categories.html">Articles</a> page for reproducible an
 
 
 If you are interested in contacting me, email: [kivan.polimis@gmail.com](mailto:kivan.polimis@gmail.com)
-<p style="text-align:center;"><img src="../../images/Kivan.jpg" alt="Kivan" style="width: 36%; height: 36%></p>
+<p style="text-align:center;"><img src="../../images/kivan_polimis_headshot.png" alt="Kivan" style="width: 400px; height: 400px></p>

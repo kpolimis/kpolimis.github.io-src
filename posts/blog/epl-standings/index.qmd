@@ -42,17 +42,23 @@ Arsenal's gold line crests at the top in 2003/04 — the season they went the en
 
 ![Arsenal's EPL trajectory — 35 seasons highlighted](arsenal-trajectory.png)
 
-Their line then dips; not catastrophically — they stayed top four for over a decade after that crowning achievement — but they had not won the title until this season. Zohran Mamdani and other famous Arsenal fans like politician Jeremy Corbyn, rapper 21 Savage, and actors Colin Firth and Idris Elba. Even NBA rivals Jaylen Brown (Boston Celtics) and Joel Embiid (Philadelphia 76ers, winner of the 2026 First Round Playoff) were able to share common cause and post Arsenal. I celebrated the way I know how, creating data visualizations.
+Their line then dips; not catastrophically — they stayed top four for over a decade after that crowning achievement — but they had not won the title until this season. Zohran Mamdani and other famous Arsenal fans like politician Jeremy Corbyn, rapper 21 Savage, and actors Colin Firth and Idris Elba. Even NBA rivals Jaylen Brown (Boston Celtics) and Joel Embiid (Philadelphia 76ers, winner of the 2026 First Round Playoff between the Celtics and 76ers) were able to share common cause and post Arsenal. I celebrated the way I know how, creating data visualizations.
 
 ### Leicester City (2015/16)
 
-No chart about the Premier League omits this. Odds of 5,000-1 at the start of the season. A squad assembled for £57 million. Riyad Mahrez, Jamie Vardy, N'Golo Kanté. Leicester's line spends most of its existence hugging the relegation zone or disappearing entirely — and then in 2016 it shoots, inexplicably, to first.
+No chart about the Premier League omits this season. Leicester started the season with 5,000-1 odds of winning a title. Their squad was assembled for £57 million with at the time relative unknowns that would become household names including Riyad Mahrez, Jamie Vardy, N'Golo Kanté. Leicester's line spends most of its existence hugging the relegation zone or disappearing entirely — and then in 2016 it shoots, inexplicably, to first.
 
-It remains the most improbable sporting result in the modern era with Leicester recently relegated from the Championship.
+It remains the most improbable sporting result in the modern era almost as improbable as Leicester relegated for the second time in three years after they were recently relegated from the Championship.
+
+### Manchester United
+
+The Red Devils, helmed by legendary manager Sir Alex Ferguson, (so [Fergalicious](https://www.youtube.com/watch?v=5T0utQ-XWGY#t=58s)) won the Premier League in 7 of the first 10 seasons of the new league. United would go on to win 6 more titles in the 16 years following years leaving Sir Alex Ferguson with 13 EPL titles in 26 seasons.
+
+When Ferguson hung up his clipboard in 2013, United sat atop English football as the sport's most decorated club. What followed was... less Fergalicious. A revolving door of managers — Moyes, Van Gaal, Mourinho, Solskjær, Rangnick, Ten Hag — cycled through Old Trafford like DiCaprio girlfriends turning 25, none able to recapture the dynasty's old magic. As of the 2025–26 season, United sit 3rd in the Premier League table with 68 points — showing signs of life, but still chasing the ghost of a dynasty that may never return. For a club that once made winning feel inevitable, third place is progress. Or at least, that's what they're telling themselves at Old Trafford.
 
 ### Manchester City's decade
 
-From 2011/12 — when they dramatically won the title on goal difference, on the last minute of the last day — City's line barely leaves the top two. Between 2017 and 2025 they won six league titles in eight years. With a 100 point season and an English treble among their many accomplishments. Their light-blue thread runs at the summit of English football for so long it starts to look inevitable.
+From 2011/12 — when they dramatically won the title on goal difference, on the last minute of the last day — City's line barely leaves the top two. Between 2017 and 2025 they won six league titles in eight years. With a 100 point season and an English treble among their many accomplishments. Their light-blue thread runs at the summit of English football for so long it starts to look [inevitable](https://www.youtube.com/watch?v=Qm4kJasYueU#t=43s).
 
 ### Liverpool (2019/20)
 

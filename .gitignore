@@ -95,9 +95,8 @@ output/theme/
 .drafts/
 
 # files
-
-# Mac files
 *.DS_Store
+*.zip
 
 # folders
 .vscode/

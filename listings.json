@@ -1,7 +1,19 @@
 [
   {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/blog/epl-standings/index.html",
+      "/posts/blog/algorithmic-bias-health-analytics/index.html",
+      "/posts/blog/migrating-pelican-to-quarto/index.html",
+      "/posts/blog/sicss-debrief/index.html",
+      "/posts/blog/make-a-pelican-blog/index.html",
+      "/posts/blog/first-post/index.html"
+    ]
+  },
+  {
     "listing": "/technical.html",
     "items": [
+      "/posts/technical/epl-clustering-tutorial/index.html",
       "/posts/technical/triple-double-russ/index.html",
       "/posts/technical/nba-shot-chart-part-1/index.html",
       "/posts/technical/mortality-data-covid-19-disinformation-part-4/index.html",
@@ -16,16 +28,6 @@
       "/posts/technical/flights-analysis/index.html",
       "/posts/technical/positions-matter/index.html",
       "/posts/technical/social-media-twitter-api-and-r/index.html"
-    ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/posts/blog/algorithmic-bias-health-analytics/index.html",
-      "/posts/blog/migrating-pelican-to-quarto/index.html",
-      "/posts/blog/sicss-debrief/index.html",
-      "/posts/blog/make-a-pelican-blog/index.html",
-      "/posts/blog/first-post/index.html"
     ]
   }
 ]

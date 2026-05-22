@@ -36,7 +36,7 @@ Hover over any line to see that club's full history: how many seasons they've pl
 
 ## The stories the chart tells
 
-### Arsenal's - (2003/04 to 2025/26)
+### Arsenal's Drought - (2003/04 to 2025/26)
 
 Arsenal won three titles in six years with their red line last cresting the league's top in 2003/04 — the season they went the entire league campaign unbeaten. Arsène Wenger's Invincibles side (Thierry Henry, Patrick Vieira, Robert Pires, Dennis Bergkamp, et al.)  won 26, drew 12, and lost none. It's the only time in the Premier League era a team completed an unblemished season.
 
@@ -44,13 +44,7 @@ Arsenal won three titles in six years with their red line last cresting the leag
 
 Their line then dips; not catastrophically — they stayed top four for over a decade after that crowning achievement — but they had not won the title until this season. New York City Mayor [Zohran Mamdani](https://x.com/ArsenalN7/status/2057595185341608069) and other famous Arsenal fans like British politician [Jeremy Corbyn](https://x.com/jeremycorbyn/status/2056871974744273224), rapper [21 Savage](https://x.com/Arsenal/status/2057084379156058167) were publicly celebrating the long journey back to first. Even NBA rivals [Boston Celtics](https://x.com/celtics/status/2057501511081443688) and Joel Embiid (Philadelphia 76ers, winner of the 2026 First Round Playoff between the Celtics and 76ers) were able to share common cause and post celebratory Arsenal messages. I celebrated the way I know how, creating data visualizations.
 
-### Leicester City (2015/16)
-
-No chart about the Premier League omits this season. Leicester started the season with 5,000-1 odds of winning a title. Their squad was assembled for £57 million with at the time relative unknowns that would become household names including Riyad Mahrez, Jamie Vardy, N'Golo Kanté. Leicester's line spends most of its existence hugging the relegation zone or disappearing entirely — and then in 2016 it shoots, inexplicably, to first.
-
-It remains the most improbable sporting result in the modern era almost as improbable as Leicester relegated for the second time in three years after they were recently relegated from the Championship.
-
-### Manchester United
+### Manchester United's Generational Run (1992/93 to 2012/13)
 
 The Red Devils, helmed by legendary manager Sir Alex Ferguson, (so [Fergalicious](https://www.youtube.com/watch?v=5T0utQ-XWGY#t=58s)) won the Premier League in 7 of the first 10 seasons of the new league. United would go on to win 6 more titles in the 16 years following years leaving Sir Alex Ferguson with 13 EPL titles in 26 seasons.
 
@@ -58,13 +52,23 @@ When Ferguson hung up his clipboard in 2013, United sat atop English football as
 
 ### Manchester City's decade
 
-From 2011/12 — when they dramatically won the title on goal difference, on the last minute of the last day — City's line barely leaves the top two. Between 2017 and 2025 they won six league titles in eight years. With a 100 point season and an English treble among their many accomplishments. Their light-blue thread runs at the summit of English football for so long it starts to look [inevitable](https://www.youtube.com/watch?v=Qm4kJasYueU#t=43s).
+From 2011/12 — when they dramatically won the title on goal difference, on the last minute of the last day — City's line barely leaves the top two. Between 2017 and 2025 they won six league titles in eight years. With a 100 point season and an English treble among their many accomplishments. Their light-blue thread runs at the summit of English football for so long it started to look [inevitable](https://www.youtube.com/watch?v=Qm4kJasYueU#t=43s).
 
-### Liverpool (2019/20)
+Legendary manager Pep Guardiola is retiring after the 2025/26 season with 6 EPL titles in 10 years including an unprecedented four titles in a row from 2021 to 2024. [Reporting suggests](https://www.nytimes.com/athletic/7289785/2026/05/20/man-city-enzo-maresca-manager-plans/) former Guardiola assistant and Chelsea boss Enzo Maresca will get the job, will he maintain City's grip on being a perennial title contender?
+
+### Liverpool's Back? (2019/20 and 2024/25)
 
 Liverpool's red line oscillates dramatically in the chart's early years. Second under Dalglish, near-misses, then a long absence from the top. They came close in 2014 — Gerrard's slip, three points dropped against Chelsea — and then Klopp arrived.
 
-In 2019/20 they won the title with 99 points, their first league championship in 30 years. In 2024/25 they won it again under Arne Slot, equalling Manchester United's record of 20 English league titles.
+In 2019/20 they won the title with 99 points, their first league championship in 30 years. In 2024/25 they won it again under Arne Slot, equalling Manchester United's record of 20 English league titles. Yet after winning the league under Slot and a big summer of investment, 2025/26 has surprised with 12 league defeats and scrapping for Champions League football.
+
+### Leicester City's Surprise (2015/16)
+
+No chart about the Premier League omits this season. Leicester started the season with 5,000-1 odds of winning a title. Their squad was assembled for £57 million with at the time relative unknowns that would become household names including Riyad Mahrez, Jamie Vardy, N'Golo Kanté. Leicester's line spends most of its existence hugging the relegation zone or disappearing entirely — and then in 2016 it shoots, inexplicably, to first.
+
+It remains the most improbable sporting result in the modern era almost as improbable as Leicester relegated for the second time in three years after they were recently relegated from the Championship.
+
+
 
 ---
 

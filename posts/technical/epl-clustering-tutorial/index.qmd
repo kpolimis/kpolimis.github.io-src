@@ -31,14 +31,18 @@ Two sources cover the full 35-season range:
 | [football-data.co.uk](https://www.football-data.co.uk) | 1993/94 → 2025/26 | Primary. One schema, 32 years, free, no auth required. |
 | [jalapic/engsoccerdata](https://github.com/jalapic/engsoccerdata) | 1991/92 + 1992/93 | Secondary — the only two seasons the primary doesn't cover. |
 
-Both sources provide raw match results, not pre-computed tables. Every finishing position is derived using the same function:
+Both sources provide raw match results, not pre-computed tables. Every finishing position is derived using the same function ([`fetch_standings.py`](https://github.com/kpolimis/epl-standings/blob/main/fetch_standings.py)):
 
 ```python
-def build_table(matches):
-    """
-    matches: list of (home, away, home_goals, away_goals)
-    Returns: {team_name: finishing_position}
-    Tiebreakers: points → goal difference → goals scored.
+def build_table(matches: list[tuple[str, str, int, int]]) -> dict[str, int] | None:
+    """Derive final league standings from raw match results.
+
+    Args:
+        matches: List of (home, away, home_goals, away_goals) tuples.
+
+    Returns:
+        Dict mapping team name to finishing position (1-indexed),
+        or None if no valid matches were provided.
     """
     pts = defaultdict(int)
     gf  = defaultdict(int)
@@ -50,6 +54,9 @@ def build_table(matches):
         if   hg > ag: pts[home] += 3
         elif hg < ag: pts[away] += 3
         else:         pts[home] += 1; pts[away] += 1
+
+    if not pts:
+        return None
 
     ranked = sorted(
         pts.keys(),
@@ -101,26 +108,34 @@ Arsenal has a position in every slot — they've never been relegated. Barnsley 
 
 ## Feature engineering
 
-The raw `pos` array isn't suitable input for a clustering algorithm directly — it's a ragged time series with gaps. Instead, I extract six scalar features that summarize the shape of each club's EPL career.
+The raw `pos` array isn't suitable input for a clustering algorithm directly — it's a ragged time series with gaps. Instead, [`extract_features()`](https://github.com/kpolimis/epl-standings/blob/main/cluster_trajectories.py) in `cluster_trajectories.py` extracts six scalar features that summarize the shape of each club's EPL career:
 
 ```python
-def extract_features(pos):
+def extract_features(pos: list[int | None]) -> list[int | float] | None:
+    """Extract scalar clustering features from a club's position history.
+
+    Args:
+        pos: Season-by-season league positions; None when not in the EPL.
+
+    Returns:
+        Six-element feature vector
+        [n_seasons, first_season, last_season, currently_in, stints, max_run],
+        or None if the club has no top-flight appearances.
+    """
     present = [i for i, p in enumerate(pos) if p is not None]
     if not present:
         return None
 
-    n_seasons    = len(present)           # total seasons in the EPL
-    first_season = present[0]             # index of first EPL appearance
-    last_season  = present[-1]            # index of last EPL appearance
-    currently_in = 1 if pos[-1] is not None else 0  # in the league right now?
+    n_seasons    = len(present)
+    first_season = present[0]
+    last_season  = present[-1]
+    currently_in = 1 if pos[-1] is not None else 0
 
-    # count separate stints — a new stint begins after any gap in presence
     stints = 1
     for i in range(1, len(present)):
         if present[i] != present[i - 1] + 1:
             stints += 1
 
-    # longest unbroken run of consecutive seasons
     run, max_run = 1, 1
     for i in range(1, len(present)):
         run = run + 1 if present[i] == present[i - 1] + 1 else 1
@@ -169,22 +184,7 @@ labels = km.fit_predict(X_scaled)
 
 ## Results
 
-Here are the four clusters, sorted by average seasons played.
-
-```python
-feature_cols = ["n_seasons", "first_season", "last_season",
-                "currently_in", "stints", "max_consecutive_run"]
-
-for c in sorted_clusters:
-    members = [team_names[i] for i, l in enumerate(labels) if l == c]
-    feats   = [extract_features(teams[t]["pos"]) for t in members]
-    print(f"\nCluster {c} — {len(members)} clubs")
-    print(f"  avg seasons:    {np.mean([f[0] for f in feats]):.1f}")
-    print(f"  avg first idx:  {np.mean([f[1] for f in feats]):.1f}")
-    print(f"  currently in:   {np.mean([f[3] for f in feats])*100:.0f}%")
-    print(f"  avg stints:     {np.mean([f[4] for f in feats]):.2f}")
-    print(f"  members: {', '.join(sorted(members))}")
-```
+Here are the four clusters, sorted by average seasons played. The full reporting loop is in [`cluster_trajectories.py`](https://github.com/kpolimis/epl-standings/blob/main/cluster_trajectories.py) — run `python cluster_trajectories.py` to reproduce this output:
 
 ```
 Cluster — 9 clubs  [Permanent fixtures]
@@ -214,7 +214,7 @@ Cluster — 11 clubs  [Modern era entrants]
            Cardiff City, Huddersfield Town, Hull City, Reading,
            Stoke City, Swansea City, Wigan Athletic
 
-Cluster — 16 clubs  [Departed]
+Cluster — 16 clubs  [EPL tourists]
   avg seasons:    6.6
   avg first idx:  3.5
   currently in:   0%
@@ -231,7 +231,7 @@ West Ham ends up in the yo-yo cluster despite 31 seasons — because they've had
 
 Brighton lands in the modern entrants cluster, which is right on average-feature grounds — but their 9 consecutive seasons and current top-half standing make them the obvious outlier within that group. The cluster analysis surfaces the pattern; the interpretation still requires looking at the actual data.
 
-The departed regulars and the yo-yo regulars have similar `first_season` averages (3.5 vs 4.3), meaning both groups were present early. What separates them is `stints` (1.62 vs 4.19) and `currently_in` (0% vs 50%). The departed regulars mostly had one sustained run and then dropped out permanently. The yo-yo clubs kept coming back.
+The EPL tourists and the yo-yo regulars have similar `first_season` averages (3.5 vs 4.3), meaning both groups were present early. What separates them is `stints` (1.62 vs 4.19) and `currently_in` (0% vs 50%). The EPL tourists mostly had one sustained run and then dropped out permanently. The yo-yo clubs kept coming back.
 
 ---
 
@@ -250,7 +250,7 @@ python generate_trajectories.py
 
 ![Modern era entrants cluster — 11 clubs, post-2011 arrivals](trajectories-modern-era.png)
 
-The four groups separate visually in a way that validates the clustering: the permanent fixtures run wall-to-wall; the yo-yo regulars have interrupted lines that resume; the modern entrants cluster in the right half of the chart; the departed regulars have lines that end and don't come back.
+The four groups separate visually in a way that validates the clustering: the permanent fixtures run wall-to-wall; the yo-yo regulars have interrupted lines that resume; the modern entrants cluster in the right half of the chart; the EPL tourists have lines that end and don't come back.
 
 ---
 

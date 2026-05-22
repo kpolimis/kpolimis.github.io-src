@@ -26,7 +26,7 @@ Each line is one EPL club and the vertical axis (y-axis) is league position. Fir
 
 ### Grouped Teams (UEFA and Relegation)
 
-The color bands signal groups of team that either qualify for [European football club competitions](https://en.wikipedia.org/wiki/UEFA_club_competitions) under the Union of European Football Association ([UEFA](https://www.uefa.com/)). The blue band at the top is the Champions League zone, currently teams that finish in the top 4 qualify for this competition. Teams that place 5th and 6th qualify for the Europa League and 7th place qualifies for the Conference League.
+The color bands signal groups of team that either qualify for [European football club competitions](https://en.wikipedia.org/wiki/UEFA_club_competitions) under the Union of European Football Association ([UEFA](https://www.uefa.com/)) or are relegated. The blue band at the top is the Champions League zone, currently teams that finish in the top 4 qualify for this competition. Teams that place 5th and 6th qualify for the Europa League and 7th place qualifies for the Conference League.
 
 The red band at the bottom is the relegation zone where three teams are dropped to the second division (Championship), making way for the 3 teams from the Championship division that won promotion. More on relegation and how it works [here](https://groundhopperguides.com/promotion-and-relegation-in-english-soccer-football/)
 
@@ -36,13 +36,13 @@ Hover over any line to see that club's full history: how many seasons they've pl
 
 ## The stories the chart tells
 
-### Arsenal - The Invincibles (2003/04)
+### Arsenal's - (2003/04 to 2025/26)
 
-Arsenal's gold line crests at the top in 2003/04 — the season they went the entire league campaign unbeaten. Arsène Wenger's side won 26, drew 12, and lost none. It's the only time in the Premier League era a team completed an unblemished season.
+Arsenal won three titles in six years with their red line last cresting the league's top in 2003/04 — the season they went the entire league campaign unbeaten. Arsène Wenger's Invincibles side (Thierry Henry, Patrick Vieira, Robert Pires, Dennis Bergkamp, et al.)  won 26, drew 12, and lost none. It's the only time in the Premier League era a team completed an unblemished season.
 
 ![Arsenal's EPL trajectory — 35 seasons highlighted](arsenal-trajectory.png)
 
-Their line then dips; not catastrophically — they stayed top four for over a decade after that crowning achievement — but they had not won the title until this season. Zohran Mamdani and other famous Arsenal fans like politician Jeremy Corbyn, rapper 21 Savage, and actors Colin Firth and Idris Elba. Even NBA rivals Jaylen Brown (Boston Celtics) and Joel Embiid (Philadelphia 76ers, winner of the 2026 First Round Playoff between the Celtics and 76ers) were able to share common cause and post Arsenal. I celebrated the way I know how, creating data visualizations.
+Their line then dips; not catastrophically — they stayed top four for over a decade after that crowning achievement — but they had not won the title until this season. New York City Mayor [Zohran Mamdani](https://x.com/ArsenalN7/status/2057595185341608069) and other famous Arsenal fans like British politician [Jeremy Corbyn](https://x.com/jeremycorbyn/status/2056871974744273224), rapper [21 Savage](https://x.com/Arsenal/status/2057084379156058167) were publicly celebrating the long journey back to first. Even NBA rivals [Boston Celtics](https://x.com/celtics/status/2057501511081443688) and Joel Embiid (Philadelphia 76ers, winner of the 2026 First Round Playoff between the Celtics and 76ers) were able to share common cause and post celebratory Arsenal messages. I celebrated the way I know how, creating data visualizations.
 
 ### Leicester City (2015/16)
 

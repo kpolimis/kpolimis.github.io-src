@@ -251,8 +251,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="getting-the-data">Getting the data</h2>
 <p>Before clustering anything, we need verified standings. The initial version of this project had the standings hand-typed from memory — which produced at least one confirmed error (Coventry City shown as relegated in 1991/92 when they weren’t) and unknown others. The right fix is to derive every table from actual match results.</p>
 <p>The data pipeline lives in <code>fetch_standings.py</code>. Run it once before anything else:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> fetch_standings.py   <span class="co"># writes data/standings_verified.json</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> generate.py          <span class="co"># reads that file, writes index.html</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> fetch_standings.py   <span class="co"># writes data/standings_verified.json</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> generate.py          <span class="co"># reads that file, writes index.html</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Two sources cover the full 35-season range:</p>
 <table class="caption-top table">
 <thead>
@@ -440,7 +440,7 @@ Cluster — 16 clubs  [Departed regulars]
 <section id="visualizing-the-clusters" class="level2">
 <h2 class="anchored" data-anchor-id="visualizing-the-clusters">Visualizing the clusters</h2>
 <p>The companion script <code>generate_trajectories.py</code> takes the cluster assignments and produces a self-contained HTML file — <code>trajectories.html</code> — showing each club as a sparkline grouped by cluster. The y-axis is league position (1 at the top, 20 at the bottom); gaps in the line are absent seasons; a filled dot marks the last known season.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> generate_trajectories.py</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> generate_trajectories.py</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># → trajectories.html</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong><a href="https://kpolimis.github.io/epl-standings/trajectories.html">→ Open the trajectory cluster chart</a></strong></p>
 <div class="quarto-figure quarto-figure-center">
@@ -954,8 +954,8 @@ Cluster — 16 clubs  [Departed regulars]
 <span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>The data pipeline lives in <span class="in">`fetch_standings.py`</span>. Run it once before anything else:</span>
 <span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> fetch_standings.py   <span class="co"># writes data/standings_verified.json</span></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> generate.py          <span class="co"># reads that file, writes index.html</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> fetch_standings.py   <span class="co"># writes data/standings_verified.json</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> generate.py          <span class="co"># reads that file, writes index.html</span></span>
 <span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>Two sources cover the full 35-season range:</span>
@@ -1174,7 +1174,7 @@ Cluster — 16 clubs  [Departed regulars]
 <span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a>The companion script <span class="in">`generate_trajectories.py`</span> takes the cluster assignments and produces a self-contained HTML file — <span class="in">`trajectories.html`</span> — showing each club as a sparkline grouped by cluster. The y-axis is league position (1 at the top, 20 at the bottom); gaps in the line are absent seasons; a filled dot marks the last known season.</span>
 <span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> generate_trajectories.py</span>
+<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> generate_trajectories.py</span>
 <span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a><span class="co"># → trajectories.html</span></span>
 <span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a></span>

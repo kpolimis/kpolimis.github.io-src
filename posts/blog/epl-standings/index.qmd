@@ -15,8 +15,6 @@ I wanted to see the league's history unfold and visualize club trajectories in o
 
 I also must confess that I'm an Arsenal fan — since 2005, a year after they last won the league. The Invincibles were the team I arrived too late to celebrate. My Gunner viewing experience consisted of twenty-two years of (mostly) top-four finishes, an appreciation for Wenger's imprint on the game (nutrition, training), but sadly, since that historic and undefeated 2004 season, twenty-two years of watching the title go somewhere else.
 
-**[→ Open the interactive chart](https://kpolimis.github.io/epl-standings/)**
-
 ---
 
 ## What you're looking at
@@ -31,6 +29,8 @@ The color bands signal groups of team that either qualify for [European football
 The red band at the bottom is the relegation zone where three teams are dropped to the second division (Championship), making way for the 3 teams from the Championship division that won promotion. More on relegation and how it works [here](https://groundhopperguides.com/promotion-and-relegation-in-english-soccer-football/).
 
 Hover over any line to see that club's full history: how many seasons they've played, their titles, their best finish, and their lowest table performance.
+
+**[→ Open the interactive chart](https://kpolimis.github.io/epl-standings/)**
 
 ---
 
@@ -48,13 +48,13 @@ Their line then dips; not catastrophically — they stayed top four for over a d
 
 The Red Devils, helmed by legendary manager Sir Alex Ferguson, (so [Fergalicious](https://www.youtube.com/watch?v=5T0utQ-XWGY#t=58s)) won the Premier League in 7 of the first 10 seasons of the new league. United would go on to win 6 more titles in the 16 years following years leaving Sir Alex Ferguson with 13 EPL titles in 26 seasons.
 
-When Ferguson hung up his clipboard in 2013, United sat atop English football as the sport's most decorated club. What followed was... less Fergalicious. A revolving door of managers — Moyes, Van Gaal, Mourinho, Solskjær, Rangnick, Ten Hag — cycled through Old Trafford like DiCaprio girlfriends turning 25, none able to recapture the dynasty's old magic. As of the 2025–26 season, United sit 3rd in the Premier League table with 68 points — showing signs of life, but still chasing the ghost of a dynasty that may never return. For a club that once made winning feel inevitable, third place is progress. Or at least, that's what they're telling themselves at Old Trafford.
+When Ferguson hung up his clipboard in 2013, United sat atop English football as the sport's most decorated club. What followed was... less Fergalicious. A revolving door of managers — Moyes, Van Gaal, Mourinho, Solskjær, Rangnick, Ten Hag — cycled through Old Trafford like DiCaprio girlfriends turning 25, none able to recapture the dynasty's old magic. As of the 2025–26 season, United sit 3rd in the Premier League table with 68 points — showing signs of life, but still chasing the ghost of a dynasty that may never return. For a club where winning the league was once a fait accompli, third place is progress. Or at least, that's what they're telling themselves at Old Trafford.
 
-### Manchester City's decade
+### Manchester City's Decade+ (2011/12 to 2023/2024)
 
-From 2011/12 — when they dramatically won the title on goal difference, on the last minute of the last day — City's line barely leaves the top two. Between 2017 and 2025 they won six league titles in eight years. With a 100 point season and an English treble among their many accomplishments. Their light-blue thread runs at the summit of English football for so long it started to look [inevitable](https://www.youtube.com/watch?v=Qm4kJasYueU#t=43s).
+From 2011/12 — when they dramatically won the title on goal difference, on the last minute of the last day — City's line barely leaves the top two. Between 2011 and 2025 they won 8 EPL titles with a 100 point season and an English treble among their many record-setting accomplishments. Their light-blue thread runs at the summit of English football for so long it started to look [inevitable](https://www.youtube.com/watch?v=Qm4kJasYueU#t=43s), as if Manchester United's dynasty had migrated east to their formerly noisy neighbors.
 
-Legendary manager Pep Guardiola is retiring after the 2025/26 season with 6 EPL titles in 10 years including an unprecedented four titles in a row from 2021 to 2024. [Reporting suggests](https://www.nytimes.com/athletic/7289785/2026/05/20/man-city-enzo-maresca-manager-plans/) former Guardiola assistant and Chelsea boss Enzo Maresca will get the job, will he maintain City's grip on being a perennial title contender?
+Legendary manager Pep Guardiola is retiring after the 2025/26 season with 6 EPL titles as part of his [17 major titles in 10 years](https://www.aljazeera.com/sports/2026/5/22/how-guardiola-compares-with-ferguson-and-other-english-managerial-greats) including an unprecedented four titles in a row from 2021 to 2024. [Reporting suggests](https://www.nytimes.com/athletic/7289785/2026/05/20/man-city-enzo-maresca-manager-plans/) former Guardiola assistant and Chelsea boss Enzo Maresca will get the job, will he maintain City's grip on being a perennial title contender?
 
 ### Liverpool's Back? (2019/20 and 2024/25)
 
@@ -89,7 +89,7 @@ And then clubs coming the other way: Brentford arrived to top flight English foo
 
 The visual patterns in the chart suggested a taxonomy. I ran a k-means cluster analysis on 35 seasons of position data for all 52 clubs — grouping teams by seasons played, when they first appeared, number of separate stints, and whether they're still in the league today. Four clusters were derived.
 
-**Permanent fixtures (9 clubs).** Arsenal, Chelsea, Everton, Liverpool, Manchester United, and Tottenham feature in every season since 1992. Aston Villa, Newcastle, and Manchester City missed a handful of seasons between them — but all three average 33+ seasons in the top flight and are still here. The Big Six plus three.
+**Permanent fixtures (9 clubs).** Arsenal, Chelsea, Everton, Liverpool, Manchester United, and Tottenham feature in every season since 1992. Aston Villa, Newcastle, and Manchester City missed a handful of seasons between them, but all three average 33+ seasons in the top flight and are still here. The Big Six plus three.
 
 **Yo-yo regulars (16 clubs).** West Ham, Crystal Palace, Burnley, Sunderland, Leicester, Leeds, Fulham, Wolves, Nottingham Forest, and others. These clubs average 14.9 seasons played across multiple stints — half still in the league, half not. Their lines in the chart are interrupted, broken, then resumed. Leicester won the title in one of their stints. Sunderland is back in 2025/26 after years away. The cluster with the most drama per season.
 

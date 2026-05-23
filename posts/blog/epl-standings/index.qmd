@@ -7,9 +7,9 @@ categories: [sports, football, data-viz, premier-league]
 draft: false
 ---
 
-The English Premier League ([EPL](https://www.premierleague.com/en)) just wrapped its 34th season and in that time, 52 clubs played at least one season. Some clubs — Arsenal, Chelsea, Liverpool, Manchester City, Manchester United, Tottenham — never left (though Tottenham tried their damndest this year). Most teams are split into three trajectories.
+The English Premier League ([EPL](https://www.premierleague.com/en)) just wrapped its 34th season and in that time, 52 clubs played at least one season. Some clubs — Arsenal, Chelsea, Liverpool, Manchester City, Manchester United, Tottenham — never left (though Tottenham tried their damndest this year). 
 
-Some joined late and never dropped — Brighton arrived in 2017 and stayed ever since. Some got relegated and never came back (Bolton, Coventry). Some yo-yoed — promoted, relegated, promoted again — with Burnley doing it so many times it became a personality trait (shoutout long-suffering Burnley superfan, Texans great JJ Watt).
+The majority of the 52 teams are split into three other trajectories. Some joined late and never dropped — Brighton arrived in 2017 and stayed ever since. Some got relegated and never came back (Bolton, Coventry). Some yo-yoed — promoted, relegated, promoted again — with Burnley doing it so many times it became a personality trait (shoutout long-suffering Burnley superfan, Texans great JJ Watt).
 
 I wanted to see the league's history unfold and visualize club trajectories in one chart. Also, the chance to use a data-driven statistical approach to cluster the teams was a puzzle I found interesting.
 
@@ -26,9 +26,9 @@ Each line is one EPL club and the vertical axis (y-axis) is league position. Fir
 
 ### Grouped Teams (UEFA and Relegation)
 
-The color bands signal groups of team that either qualify for [European football club competitions](https://en.wikipedia.org/wiki/UEFA_club_competitions) under the Union of European Football Association ([UEFA](https://www.uefa.com/)) or are relegated. The blue band at the top is the Champions League zone, currently teams that finish in the top 4 qualify for this competition. Teams that place 5th and 6th qualify for the Europa League and 7th place qualifies for the Conference League.
+The color bands signal groups of team that either qualify for [European football club competitions](https://en.wikipedia.org/wiki/UEFA_club_competitions) under the Union of European Football Association ([UEFA](https://www.uefa.com/)) or are relegated. The blue band at the top is the Champions League zone, currently teams that finish in the top 4 qualify for this competition. Teams that place 5th and 6th qualify for the Europa League and are in the yellow band. The green band is for the 7th place finisher who qualifies for the Conference League.
 
-The red band at the bottom is the relegation zone where three teams are dropped to the second division (Championship), making way for the 3 teams from the Championship division that won promotion. More on relegation and how it works [here](https://groundhopperguides.com/promotion-and-relegation-in-english-soccer-football/)
+The red band at the bottom is the relegation zone where three teams are dropped to the second division (Championship), making way for the 3 teams from the Championship division that won promotion. More on relegation and how it works [here](https://groundhopperguides.com/promotion-and-relegation-in-english-soccer-football/).
 
 Hover over any line to see that club's full history: how many seasons they've played, their titles, their best finish, and their lowest table performance.
 

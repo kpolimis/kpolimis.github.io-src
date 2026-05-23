@@ -24,13 +24,13 @@ Each line is one EPL club and the vertical axis (y-axis) is league position. Fir
 
 ### Grouped Teams (UEFA and Relegation)
 
-The color bands signal groups of team that either qualify for [European football club competitions](https://en.wikipedia.org/wiki/UEFA_club_competitions) under the Union of European Football Association ([UEFA](https://www.uefa.com/)) or are relegated. The blue band at the top is the Champions League zone, currently teams that finish in the top 4 qualify for this competition. Teams that place 5th and 6th qualify for the Europa League and are in the yellow band. The green band is for the 7th place finisher who qualifies for the Conference League.
+The color bands signal groups of team that either qualify for [European football club competitions](https://en.wikipedia.org/wiki/UEFA_club_competitions) under the Union of European Football Association ([UEFA](https://www.uefa.com/)) or are relegated. The blue band at the top is the Champions League zone, currently teams that finish in the top 4 qualify for this competition. Teams that place 5th and 6th qualify for the Europa League and are in the amber band. The teal band is for the 7th place finisher who qualifies for the Conference League.
 
 The red band at the bottom is the relegation zone where three teams are dropped to the second division (Championship), making way for the 3 teams from the Championship division that won promotion. More on relegation and how it works [here](https://groundhopperguides.com/promotion-and-relegation-in-english-soccer-football/).
 
-### Interacting with Chart
+### Interacting with the Data Visualization
 
-The chart is a [bump chart](https://datavizproject.com/data-type/bump-chart-2/) where each team is a colored line tracing its finishing position across every season, with 1st place at the top and 20th (or 22nd in the early 22-team seasons) at the bottom. Relegated teams that never came back leave a faded marker — a small badge pinned at the column of their last season, permanently.
+The visualization is a [bump chart](https://datavizproject.com/data-type/bump-chart-2/) where each team is a colored line tracing its finishing position across every season, with 1st place at the top and 20th (or 22nd in the early 22-team seasons) at the bottom. Relegated teams that never came back leave a faded marker — a small badge pinned at the column of their last season, permanently.
 
 The animation plays one season at a time. As each season is revealed, lines grow rightward, new dots pop in at each team's finishing position, and team badge markers glide along the playhead. Teams that win the title are called out in the champion banner at the top with their logo and season.
 

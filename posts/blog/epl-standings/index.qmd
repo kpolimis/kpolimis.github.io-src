@@ -28,7 +28,22 @@ The color bands signal groups of team that either qualify for [European football
 
 The red band at the bottom is the relegation zone where three teams are dropped to the second division (Championship), making way for the 3 teams from the Championship division that won promotion. More on relegation and how it works [here](https://groundhopperguides.com/promotion-and-relegation-in-english-soccer-football/).
 
-Hover over any line to see that club's full history: how many seasons they've played, their titles, their best finish, and their lowest table performance.
+### Interacting with Chart
+
+The chart is a [bump chart](https://datavizproject.com/data-type/bump-chart-2/) where each team is a colored line tracing its finishing position across every season, with 1st place at the top and 20th (or 22nd in the early 22-team seasons) at the bottom. Relegated teams that never came back leave a faded marker — a small badge pinned at the column of their last season, permanently.
+
+The animation plays one season at a time. As each season is revealed, lines grow rightward, new dots pop in at each team's finishing position, and team badge markers glide along the playhead. Teams that win the title are called out in the champion banner at the top with their logo and season.
+
+**Controls**:
+
+* ↺ — resets to the 1991/92 First Division season
+* ▶ Play / ⏸ Pause — starts or stops the animation (also Space)
+* 0.5× 1× 2× 5× — speed buttons, slowing to one season every 1.4 seconds or accelerating to nearly a flash
+* Scrubber — drag the slider to jump directly to any season
+* ← → (arrow keys) — step one season at a time when paused, useful for examining a specific moment
+
+Hovering any line dims everything else and shows a tooltip with that team's current position in the animation, their full EPL season count, any titles they've won (with years), and their best finish so far in the playback.
+The roster table below the chart lists all 52 clubs that have ever appeared in the data, sortable by seasons played, best finish, or A–Z. Clicking any chip highlights that team's trajectory in the chart and scrolls up to it
 
 **[→ Open the interactive chart](https://kpolimis.github.io/epl-standings/)**
 

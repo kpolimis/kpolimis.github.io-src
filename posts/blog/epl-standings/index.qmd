@@ -1,5 +1,5 @@
 ---
-title: "Visualizing Every Premier League Finish, Every Season Since 1992"
+title: "Visualizing Every Premier League Season Finish Since 1992"
 date: "2026-05-24"
 author: "Kivan Polimis"
 description: "34 seasons of Premier League finishes, visualized as an animated bump chart. Arsenal's drought, Leicester's miracle, Manchester [City/United] dominance — and a k-means cluster analysis grouping all 52 clubs by trajectory type."

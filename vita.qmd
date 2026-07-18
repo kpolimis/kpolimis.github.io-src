@@ -18,28 +18,29 @@ toc-depth: 2
 
 <div class="cv-section">
 
-**2021–** &emsp; Senior Data Scientist, [Karna](https://karna.com), Atlanta, GA
+**2021–Present** &emsp; Senior Data Scientist, [Karna](https://karna.com), Atlanta, GA
 
-- Designed applications integrating machine learning algorithms for healthcare operations; high-risk patient models reduced costs by approximately 10%.
-- Automated monthly project reporting, saving 40 hours of analyst time.
-- Led cross-functional teams from strategic roadmaps to project milestones.
-- *Awards: 2023 President's Award, 2023 Technical Achievement Award, 2022 Community Engagement Award*
+- Architected and deployed a web-based document intelligence platform integrating cloud document extraction services (Azure, AWS, GCP) and GPT-4 for automated clinical document processing; primary showcase for document AI capabilities.
+- Led dashboard development and analytics delivery for a live state Medicaid program, coordinating across three organizations and presenting MVP to state agency and health plan stakeholders.
+- Designed a production ML pipeline for patient risk classification with automated drift monitoring, reducing unnecessary ED visits and downstream costs in high-risk patient populations.
+- Designed compliant data infrastructure in Snowflake and reproducible statistical analyses in R and Python supporting national opioid response and population health programs.
+- *Awards: [President's Award (2023)](https://www.linkedin.com/posts/karnallc_2023-karna-annual-awardees-activity-7146207174480785409-j72w), [Technical Achievement Award (2023)](https://www.linkedin.com/posts/karnallc_2023-karna-annual-awardees-activity-7146207174480785409-j72w), [Community Engagement Award (2022)](https://www.linkedin.com/posts/karnallc_karnallc-publichealth-2022awards-activity-7014680288492421120-ZHZD), [Outstanding Publication runner-up (2022)](https://www.linkedin.com/posts/karnallc_karnallc-publichealth-2022awards-activity-7014680288492421120-ZHZD), Technical Achievement runner-up (2024)*
 
-**2021–** &emsp; Lecturer, [University of Washington, Department of Sociology](https://sociology.washington.edu), Seattle, WA
+**2021–Present** &emsp; Lecturer, [University of Washington, Department of Sociology](https://sociology.washington.edu), Seattle, WA
 
 - Lectured on data science topics including Algorithmic Bias, AI Ethics, and Data Visualization.
 - Designed curricula and assessments focused on producing, collecting, and analyzing digital trace data.
 
-**2021–2021** &emsp; Senior Policy Advisor, Office of Harris County Judge Lina Hidalgo, Houston, TX
+**2020–2021** &emsp; Senior Policy Advisor, Office of Harris County Judge Lina Hidalgo, Houston, TX
 
 - Implemented county-wide initiatives collaborating across government and the private sector; permanent supportive housing proposals estimated at $6 million annual savings.
 - Developed automated COVID-19 reporting that reduced run time by 90% and improved data quality.
 
-**2020–** &emsp; Principal, [Atlas Analytics](https://www.analyticsbyatlas.com/), Houston, TX
+**2020–Present** &emsp; Principal, [Atlas Analytics](https://www.analyticsbyatlas.com/), Houston, TX
 
-- Applied statistical modeling and NLP to increase referral conversion approximately 20%.
-- Engineered data fusion approaches for market analysis, corporate valuations, and customer analytics.
-- Architected cloud computing solutions for scalable data processing and analysis.
+- Applied statistical modeling and NLP to increase referral conversion by approximately 20%.
+- Built a scalable entity resolution pipeline in Python/SQL joining fragmented SBA datasets with merchant registries, achieving 86% recall via a tiered probabilistic matching algorithm.
+- Architected end-to-end ML pipelines from feature engineering through model deployment, delivering customer propensity scoring and market segmentation solutions.
 
 **2018–2020** &emsp; Data Scientist, MAANA, Houston, TX
 
@@ -213,9 +214,11 @@ Rokem, Ariel, **Kivan Polimis**, and Bryna Hazelton. 2016. [forest-confidence-in
 
 | Year | |
 |---|---|
-| 2023 | Karna — President's Award |
-| 2023 | Karna — Technical Achievement Award |
-| 2022 | Karna — Community Engagement Award |
+| 2024 | Karna — Technical Achievement Award runner-up |
+| 2023 | Karna — [President's Award](https://www.linkedin.com/posts/karnallc_2023-karna-annual-awardees-activity-7146207174480785409-j72w) |
+| 2023 | Karna — [Technical Achievement Award](https://www.linkedin.com/posts/karnallc_2023-karna-annual-awardees-activity-7146207174480785409-j72w) |
+| 2022 | Karna — [Community Engagement Award](https://www.linkedin.com/posts/karnallc_karnallc-publichealth-2022awards-activity-7014680288492421120-ZHZD) |
+| 2022 | Karna — [Outstanding Publication Award runner-up](https://www.linkedin.com/posts/karnallc_karnallc-publichealth-2022awards-activity-7014680288492421120-ZHZD) |
 | 2018 | Online calculator to help tackle disparities in the criminal justice system in Washington state |
 | 2017 | My eScience Experience |
 | 2017 | GitHub for Collaboration |
